@@ -1,4 +1,4 @@
-package com.example.examsplattaform;
+package com.example.examsplattaform.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
