@@ -7,16 +7,18 @@ public class Examen {
     private int id;
     private String titulo;
     private String subtitulo;
+    private String materia;
     private String clave;
     private Map<String, Pregunta>preguntas;
 
     private float totalPuntos;
     private float puntoXPregunta;
 
-    public Examen(String titulo, String subtitulo, float totalPuntos) {
+    public Examen(String titulo, String subtitulo, String materia,float totalPuntos) {
         this.titulo = titulo;
         this.subtitulo = subtitulo;
         this.totalPuntos = totalPuntos;
+        this.materia=materia;
         this.id=hashCode();
     }
 
@@ -74,6 +76,14 @@ public class Examen {
 
     public void setPuntoXPregunta(float puntoXPregunta) {
         this.puntoXPregunta = puntoXPregunta;
+    }
+
+    public String getMateria() {
+        return materia;
+    }
+
+    public void setMateria(String materia) {
+        this.materia = materia;
     }
 
     @Override
