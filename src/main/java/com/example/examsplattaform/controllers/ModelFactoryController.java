@@ -1,5 +1,7 @@
 package com.example.examsplattaform.controllers;
 
+import com.example.examsplattaform.exceptions.AccountException;
+import com.example.examsplattaform.model.Cuenta;
 import com.example.examsplattaform.model.Plataforma;
 import com.example.examsplattaform.persistencia.Persistencia;
 
@@ -7,7 +9,11 @@ import java.io.IOException;
 
 public class ModelFactoryController {
 
-    Plataforma plataforma;
+    private Plataforma plataforma;
+
+    public void ingresar(Cuenta cuenta) throws AccountException {
+        plataforma.ingresar(cuenta);
+    }
 
     //------------------------------  Singleton ------------------------------------------------
     // Clase estatica oculta. Tan solo se instanciara el singleton una vez
@@ -69,5 +75,9 @@ public class ModelFactoryController {
     private void inicializarDatos() throws IOException {
         plataforma = new Plataforma();
         System.out.println("Domain inicializado " + plataforma);
+    }
+
+    public Plataforma getPlataforma() {
+        return plataforma;
     }
 }
