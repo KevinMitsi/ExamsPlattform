@@ -5,31 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2bda76d7-8eec-4490-9aac-a390df4722e5" name="Changes" comment="First steps on the creation of the project">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/archivo/Log.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/archivo/model.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/archivo/model.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/RegisterViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/examsplattaform/register-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/Alerta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/ExamsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/ExamsApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/HelloController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/LoginViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/LoginViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/AbstractRespuesta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/AbstractRespuesta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Cuenta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Cuenta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Estudiante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Estudiante.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Examen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Examen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Persona.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Plataforma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Plataforma.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Pregunta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Pregunta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/PreguntaAbierta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/PreguntaAbierta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/PreguntaMultiple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/PreguntaMultiple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/PreguntaTF.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/PreguntaTF.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Profesor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Profesor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Repuesta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Repuesta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/persistencia/Persistencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/persistencia/Persistencia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/examsplattaform/hello-view.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/examsplattaform/login-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/examsplattaform/login-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/archivo/Log.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/archivo/Log.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +45,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "KevinsBranch",
-    "last_opened_file_path": "C:/Users/Kevin/Desktop/Universidad/Estructuras/ExamsPlattaform/src/main/resources/com/example/examsplattaform"
+    "last_opened_file_path": "C:/Users/Kevin/Program Files/SceneBuilder/SceneBuilder.exe"
   }
 }]]></component>
   <component name="RecentsManager">
