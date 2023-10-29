@@ -11,5 +11,4 @@ module com.example.examsplattaform {
     exports com.example.examsplattaform.controllers;
     exports com.example.examsplattaform.model;
     exports com.example.examsplattaform.exceptions;
-
 }

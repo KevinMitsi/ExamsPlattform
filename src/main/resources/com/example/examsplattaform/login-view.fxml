@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="324.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.examsplattaform.controllers.LoginViewController">
+<AnchorPane prefHeight="400.0" prefWidth="330.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.examsplattaform.controllers.LoginViewController">
     <children>
         <VBox alignment="CENTER" spacing="10" />
         <HBox layoutX="11.0" layoutY="360.0" prefHeight="25.0" prefWidth="295.0">

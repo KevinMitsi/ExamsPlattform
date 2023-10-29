@@ -1,10 +1,11 @@
 package com.example.examsplattaform.model;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
-public class Estudiante extends Persona{
+public class Estudiante extends Persona implements Serializable {
     private String nombre;
     private String apellido;
     private String cedula;

@@ -1,8 +1,9 @@
 package com.example.examsplattaform.model;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Cuenta {
+public class Cuenta implements Serializable {
     private String usuario;
     private String password;
     private Persona personaAsociada;

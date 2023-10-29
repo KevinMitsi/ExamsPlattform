@@ -2,11 +2,12 @@ package com.example.examsplattaform.model;
 
 import javafx.scene.image.Image;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class PreguntaAbierta extends Pregunta{
+public class PreguntaAbierta extends Pregunta implements Serializable {
     private Image image;
     private String titulo;
     private String enunciado;

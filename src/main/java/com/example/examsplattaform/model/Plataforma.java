@@ -4,12 +4,13 @@ import com.example.examsplattaform.exceptions.AccountException;
 import com.example.examsplattaform.exceptions.AlreadyRegisteredUserException;
 import com.example.examsplattaform.exceptions.UserNotFoundException;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Plataforma {
+public class Plataforma implements Serializable {
 
     //----------------------------------Attributes------------------------------------------
     private String nombre;
