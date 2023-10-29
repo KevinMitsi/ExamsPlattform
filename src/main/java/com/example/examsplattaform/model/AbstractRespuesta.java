@@ -1,4 +1,6 @@
 package com.example.examsplattaform.model;
 
-public abstract class AbstractRespuesta {
+import java.io.Serializable;
+
+public abstract class AbstractRespuesta implements Serializable {
 }

@@ -1,9 +1,10 @@
 package com.example.examsplattaform.model;
 
+import java.io.Serializable;
 import java.util.Map;
 import java.util.Objects;
 
-public class Examen {
+public class Examen implements Serializable {
     private int id;
     private String titulo;
     private String subtitulo;

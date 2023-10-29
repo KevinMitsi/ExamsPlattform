@@ -1,11 +1,12 @@
 package com.example.examsplattaform.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-public class Profesor extends Persona{
+public class Profesor extends Persona implements Serializable {
     private String nombre;
     private String apellido;
     private String colegio;

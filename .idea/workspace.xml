@@ -5,17 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2bda76d7-8eec-4490-9aac-a390df4722e5" name="Changes" comment="First steps on the creation of the project">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/exceptions/AccountException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/exceptions/AlreadyRegisteredUserException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/exceptions/ExamNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/exceptions/UserNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Plataforma.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/archivo/Log.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/archivo/model.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/archivo/model.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/RegisterViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/examsplattaform/register-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/ModelFactoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/ModelFactoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/ExamsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/ExamsApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/LoginViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/LoginViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/AbstractRespuesta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/AbstractRespuesta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Cuenta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Cuenta.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Estudiante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Estudiante.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Examen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Examen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Persona.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Plataforma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Plataforma.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Pregunta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Pregunta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/PreguntaAbierta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/PreguntaAbierta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/PreguntaMultiple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/PreguntaMultiple.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/PreguntaTF.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/PreguntaTF.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Profesor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Profesor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Repuesta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Repuesta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/persistencia/Persistencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/persistencia/Persistencia.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/examsplattaform/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/examsplattaform/login-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/examsplattaform/login-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,20 +55,29 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
+    <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;KevinsBranch&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Kevin/Desktop/Universidad/Estructuras/ExamsPlattaform/src/main/resources/com/example/examsplattaform&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "KevinsBranch",
+    "last_opened_file_path": "C:/Users/Kevin/Desktop/Universidad/Estructuras/ExamsPlattaform/src/main/resources/com/example/examsplattaform"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Kevin\Desktop\Universidad\Estructuras\ExamsPlattaform\src\main\resources\com\example\examsplattaform" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Kevin\Desktop\Universidad\Estructuras\ExamsPlattaform\src\main\resources" />
+      <recent name="C:\Users\Kevin\Desktop\Universidad\Estructuras\ExamsPlattaform\src" />
+      <recent name="C:\Users\Kevin\Desktop\Universidad\Estructuras\ExamsPlattaform\src\main\java\com\example\examsplattaform" />
+      <recent name="C:\Users\Kevin\Desktop\Universidad\Estructuras\ExamsPlattaform\src\main\resources\com\example\examsplattaform" />
+      <recent name="C:\Users\Kevin\Desktop\Universidad\Estructuras\ExamsPlattaform\src\main\resources\com\example\examsplattaform\appImages" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -89,6 +112,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="First steps on the creation of the project" />
     <option name="LAST_COMMIT_MESSAGE" value="First steps on the creation of the project" />
   </component>

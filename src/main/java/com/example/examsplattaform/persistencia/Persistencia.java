@@ -4,9 +4,9 @@ import com.example.examsplattaform.model.Plataforma;
 
 
 public class Persistencia {
-    public static final String RUTA_ARCHIVO_LOG = "src/main/java/com/example/jmmoto/archivo/Log.log";
-    public static final String RUTA_ARCHIVO_MODELO_TALLER_BINARIO = "src/main/java/com/example/jmmoto/archivo/model.dat";
-    public static final String RUTA_ARCHIVO_MODELO_TALLER_XML = "src/main/java/com/example/jmmoto/archivo/model.xml";
+    public static final String RUTA_ARCHIVO_LOG = "src/main/java/com/example/examsplattaform/archivo/Log.log";
+    public static final String RUTA_ARCHIVO_MODELO_TALLER_BINARIO = "src/main/java/com/example/examsplattaform/archivo/model.dat";
+    public static final String RUTA_ARCHIVO_MODELO_TALLER_XML = "src/main/java/com/example/examsplattaform/archivo/model.xml";
 
 
     public static void guardaRegistroLog(String mensajeLog, int nivel, String accion)
