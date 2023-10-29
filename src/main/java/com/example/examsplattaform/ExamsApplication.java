@@ -1,7 +1,6 @@
 package com.example.examsplattaform;
 
-import com.example.examsplattaform.controllers.Alerta;
-import com.example.examsplattaform.controllers.LoginViewController;
+import com.example.examsplattaform.controllers.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -38,24 +37,52 @@ public class ExamsApplication extends Application {
         stage.show();
     }
 
-    public static void main(String[] args) {
-        launch();
-    }
-
-    public void abrirRegistrarUsuario() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(ExamsApplication.class.getResource("register-view.fxml"));
+    public void abrirSelector(boolean isLogin) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(ExamsApplication.class.getResource("selection-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         scene.getStylesheets().add(Objects.requireNonNull(ExamsApplication.class.getResource("styles.css")).toExternalForm());
-        LoginViewController controller = fxmlLoader.getController();
+        SelectionViewController controller = fxmlLoader.getController();
+        controller.setMain(this, isLogin);
+        stage.setTitle("Login");
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void abrirRegistrarProfesor() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(ExamsApplication.class.getResource("registerTeacher-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        scene.getStylesheets().add(Objects.requireNonNull(ExamsApplication.class.getResource("styles.css")).toExternalForm());
+        RegisterViewController controller = fxmlLoader.getController();
         controller.setMain(this);
         stage.setTitle("Login");
         stage.setScene(scene);
         stage.show();
     }
+
+    public void abrirRegistrarUsuario() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(ExamsApplication.class.getResource("registerStudent-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        scene.getStylesheets().add(Objects.requireNonNull(ExamsApplication.class.getResource("styles.css")).toExternalForm());
+        RegisterStudentViewController controller = fxmlLoader.getController();
+        controller.setMain(this);
+        stage.setTitle("Login");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void abrirPanelProfesor() {
+    }
+
+    public void abrirPanelEstudiante() {
+    }
+
     private void intentarCerrar(){
         if(Alerta.saltarAlertaConfirmacion("ESTA APUNTO DE CERRAR","Usted está a punto de salir") == ButtonType.OK){
             System.out.println("Ha cerrado la aplicación");
             stage.close();
         }
     }
+    public static void main(String[] args) {
+        launch();
+    }
+
 }

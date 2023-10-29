@@ -146,13 +146,23 @@ public class Plataforma implements Serializable {
      * @throws AccountException the account is already registered
      */
 
-    private boolean verificarCuenta(Cuenta cuenta) throws AccountException {
+    public boolean verificarCuenta(Cuenta cuenta) throws AccountException {
         if(cuentaList.contains(cuenta)){
             throw new AccountException("Esta cuenta ya está registrada");
         }
         else{
             return true;
         }
+    }
+
+    public boolean ingresar(Cuenta cuenta) throws AccountException{
+        if (!cuentaList.contains(cuenta)){
+            throw new AccountException("Esta cuenta no se encuentra registrada");
+        }
+        else{
+            return true;
+        }
+
     }
 
 
