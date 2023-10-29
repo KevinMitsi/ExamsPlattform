@@ -1,9 +1,11 @@
 package com.example.examsplattaform;
 
+import com.example.examsplattaform.controllers.Alerta;
 import com.example.examsplattaform.controllers.LoginViewController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.ButtonType;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
@@ -18,14 +20,16 @@ public class ExamsApplication extends Application {
        this.stage = stage;
        this.stage.getIcons().add(icon);
        this.stage.setResizable(false);
+       this.stage.setOnCloseRequest(event -> {
+           event.consume();
+           intentarCerrar();
+       });
        inicilizarLogin();
     }
 
     public void inicilizarLogin() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(ExamsApplication.class.getResource("login-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        stage.setWidth(350.0);
-        stage.setHeight(450.0);
         scene.getStylesheets().add(Objects.requireNonNull(ExamsApplication.class.getResource("styles.css")).toExternalForm());
         LoginViewController controller = fxmlLoader.getController();
         controller.setMain(this);
@@ -47,5 +51,11 @@ public class ExamsApplication extends Application {
         stage.setTitle("Login");
         stage.setScene(scene);
         stage.show();
+    }
+    private void intentarCerrar(){
+        if(Alerta.saltarAlertaConfirmacion("ESTA APUNTO DE CERRAR","Usted está a punto de salir") == ButtonType.OK){
+            System.out.println("Ha cerrado la aplicación");
+            stage.close();
+        }
     }
 }
