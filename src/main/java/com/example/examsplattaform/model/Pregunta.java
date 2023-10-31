@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.util.Objects;
 
 public abstract class Pregunta implements Serializable {
-    private final Image image;
+    private Image image;
     private  String titulo;
     private  String enunciado;
 
@@ -14,6 +14,9 @@ public abstract class Pregunta implements Serializable {
         this.image = image;
         this.titulo = titulo;
         this.enunciado = enunciado;
+    }
+
+    public Pregunta() {
     }
 
     public Image getImage() {

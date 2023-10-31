@@ -53,7 +53,7 @@ public class ExamsApplication extends Application {
         scene.getStylesheets().add(Objects.requireNonNull(ExamsApplication.class.getResource("styles.css")).toExternalForm());
         RegisterViewController controller = fxmlLoader.getController();
         controller.setMain(this);
-        stage.setTitle("Login");
+        stage.setTitle("Registro Profesor");
         stage.setScene(scene);
         stage.show();
     }
@@ -64,7 +64,7 @@ public class ExamsApplication extends Application {
         scene.getStylesheets().add(Objects.requireNonNull(ExamsApplication.class.getResource("styles.css")).toExternalForm());
         RegisterStudentViewController controller = fxmlLoader.getController();
         controller.setMain(this);
-        stage.setTitle("Login");
+        stage.setTitle("Registro Student");
         stage.setScene(scene);
         stage.show();
     }

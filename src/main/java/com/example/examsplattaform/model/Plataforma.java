@@ -27,11 +27,15 @@ public class Plataforma implements Serializable {
         this.id = id;
         profesresRegistrados = new ArrayList<>();
         estudiantesRegistrados = new ArrayList<>();
+        cuentaList = new ArrayList<>();
         examenList = new HashMap<>();
     }
 
     public Plataforma(){
-
+        profesresRegistrados = new ArrayList<>();
+        estudiantesRegistrados = new ArrayList<>();
+        cuentaList=new ArrayList<>();
+        examenList = new HashMap<>();
     }
 
     //-----------Getters && Setters -----------------------\\
@@ -138,7 +142,7 @@ public class Plataforma implements Serializable {
     }
 
     public void ingresar(Cuenta cuenta) throws AccountException{
-        if (!cuentaList.contains(cuenta)){
+        if (cuentaList.contains(cuenta)){
             throw new AccountException("Esta cuenta no se encuentra registrada");
         }
 

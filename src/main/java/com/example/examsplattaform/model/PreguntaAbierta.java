@@ -24,6 +24,9 @@ public class PreguntaAbierta extends Pregunta implements Serializable {
         this.respuestaCorrecta = new ArrayList<>();
     }
 
+    public PreguntaAbierta() {
+    }
+
     public Image getImage() {
         return image;
     }

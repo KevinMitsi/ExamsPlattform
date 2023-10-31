@@ -10,7 +10,7 @@ public class PreguntaTF extends Pregunta implements Serializable {
     private String titulo;
     private String enunciado;
     private int id;
-    private final boolean value;
+    private boolean value;
 
     public PreguntaTF(Image image, String titulo, String enunciado, Image image1, String titulo1, String enunciado1, boolean value) {
         super(image, titulo, enunciado);
@@ -19,6 +19,9 @@ public class PreguntaTF extends Pregunta implements Serializable {
         this.enunciado = enunciado1;
         this.id = hashCode();
         this.value = value;
+    }
+
+    public PreguntaTF() {
     }
 
     public Image getImage() {
@@ -56,6 +59,10 @@ public class PreguntaTF extends Pregunta implements Serializable {
 
     public boolean isValue() {
         return value;
+    }
+
+    public void setValue(boolean value) {
+        this.value = value;
     }
 
     @Override

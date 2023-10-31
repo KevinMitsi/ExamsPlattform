@@ -37,7 +37,10 @@ public class RegisterStudentViewController {
             try{
                 Cuenta cuenta = new Cuenta(tfUser.getText(), pfPassword.getText());
                 Estudiante estudiante = new Estudiante(tfName.getText(), tfApellido.getText(),tfId.getText(),cuenta);
+                cuenta.setPersonaAsociada(estudiante);
                 singleton.getPlataforma().registrarEstudiante(estudiante);
+                singleton.guardarResourceXML();
+                singleton.guardarResourceBinario();
                 main.inicilizarLogin();
             } catch (AccountException | AlreadyRegisteredUserException e) {
                 Alerta.saltarAlertaError(e.getMessage());
@@ -51,7 +54,7 @@ public class RegisterStudentViewController {
     }
 
     private boolean verificarCampos() {
-        return !tfName.getText().isBlank() && !tfApellido.getText().isBlank() && tfId.getText().isBlank() && !tfUser.getText().isBlank() && !pfPassword.getText().isBlank();
+        return !tfName.getText().isBlank() && !tfApellido.getText().isBlank() && !tfId.getText().isBlank() && !tfUser.getText().isBlank() && !pfPassword.getText().isBlank();
     }
 
 

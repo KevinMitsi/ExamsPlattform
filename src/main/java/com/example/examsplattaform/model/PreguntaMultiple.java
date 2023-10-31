@@ -25,6 +25,9 @@ public class PreguntaMultiple extends Pregunta implements Serializable {
         this.correcta = correcta;
     }
 
+    public PreguntaMultiple() {
+    }
+
     public Image getImage() {
         return image;
     }

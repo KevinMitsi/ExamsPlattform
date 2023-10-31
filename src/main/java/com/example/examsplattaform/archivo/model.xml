@@ -1,4 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <java version="19.0.2" class="java.beans.XMLDecoder">
- <object class="com.example.examsplattaform.model.Plataforma"/>
+ <object class="com.example.examsplattaform.model.Plataforma" id="Plataforma0">
+  <void property="estudiantesRegistrados">
+   <void method="add">
+    <object class="com.example.examsplattaform.model.Estudiante" id="Estudiante0">
+     <void property="apellido">
+      <string>Garcia</string>
+     </void>
+     <void property="cedula">
+      <string>1004917</string>
+     </void>
+     <void property="cuenta">
+      <object class="com.example.examsplattaform.model.Cuenta">
+       <void property="password">
+        <string>ana123</string>
+       </void>
+       <void property="personaAsociada">
+        <object idref="Estudiante0"/>
+       </void>
+       <void property="usuario">
+        <string>kevinmitsi</string>
+       </void>
+      </object>
+     </void>
+     <void property="examenesRealizados">
+      <object class="java.util.HashMap"/>
+     </void>
+     <void property="nombre">
+      <string>Kevin</string>
+     </void>
+    </object>
+   </void>
+  </void>
+ </object>
 </java>
