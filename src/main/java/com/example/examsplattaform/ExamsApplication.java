@@ -43,7 +43,7 @@ public class ExamsApplication extends Application {
         scene.getStylesheets().add(Objects.requireNonNull(ExamsApplication.class.getResource("styles.css")).toExternalForm());
         SelectionViewController controller = fxmlLoader.getController();
         controller.setMain(this, isLogin);
-        stage.setTitle("Login");
+        stage.setTitle("Selector");
         stage.setScene(scene);
         stage.show();
     }
@@ -74,7 +74,6 @@ public class ExamsApplication extends Application {
 
     public void abrirPanelEstudiante() {
     }
-
     private void intentarCerrar(){
         if(Alerta.saltarAlertaConfirmacion("ESTA APUNTO DE CERRAR","Usted está a punto de salir") == ButtonType.OK){
             System.out.println("Ha cerrado la aplicación");

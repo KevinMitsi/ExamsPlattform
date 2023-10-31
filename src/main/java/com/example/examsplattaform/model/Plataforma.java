@@ -137,6 +137,13 @@ public class Plataforma implements Serializable {
         }
     }
 
+    public void ingresar(Cuenta cuenta) throws AccountException{
+        if (!cuentaList.contains(cuenta)){
+            throw new AccountException("Esta cuenta no se encuentra registrada");
+        }
+
+    }
+
     //----------------Private Methods for the internal functions ----------------------------------
 
     /**
@@ -146,7 +153,7 @@ public class Plataforma implements Serializable {
      * @throws AccountException the account is already registered
      */
 
-    public boolean verificarCuenta(Cuenta cuenta) throws AccountException {
+    private boolean verificarCuenta(Cuenta cuenta) throws AccountException {
         if(cuentaList.contains(cuenta)){
             throw new AccountException("Esta cuenta ya está registrada");
         }
@@ -155,15 +162,7 @@ public class Plataforma implements Serializable {
         }
     }
 
-    public boolean ingresar(Cuenta cuenta) throws AccountException{
-        if (!cuentaList.contains(cuenta)){
-            throw new AccountException("Esta cuenta no se encuentra registrada");
-        }
-        else{
-            return true;
-        }
 
-    }
 
 
 

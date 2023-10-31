@@ -10,7 +10,6 @@ public class Estudiante extends Persona implements Serializable {
     private String apellido;
     private String cedula;
     private Map<String, Examen>examenesRealizados;
-
     private Cuenta cuenta;
 
     public Estudiante(String nombre, String apellido, String cedula, Cuenta cuenta) {
