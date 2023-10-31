@@ -40,7 +40,9 @@ public class SelectionViewController {
             }
             if(isLogin){
                 if (cbOptions.getValue().equals("Profesor")){
-                    main.abrirPanelProfesor();
+                    try{
+                        main.abrirPanelProfesor();
+                    }
                 }
                 if (cbOptions.getValue().equals("Estudiante")){
                     main.abrirPanelEstudiante();

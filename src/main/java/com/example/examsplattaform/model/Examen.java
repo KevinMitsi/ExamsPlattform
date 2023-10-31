@@ -1,6 +1,7 @@
 package com.example.examsplattaform.model;
 
 import java.io.Serializable;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
@@ -21,6 +22,10 @@ public class Examen implements Serializable {
         this.totalPuntos = totalPuntos;
         this.materia=materia;
         this.id=hashCode();
+    }
+
+    public Examen() {
+        preguntas= new HashMap<>();
     }
 
     public int getId() {

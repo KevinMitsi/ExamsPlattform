@@ -25,6 +25,9 @@ public class Profesor extends Persona implements Serializable {
         resueltos = new ArrayList<>();
     }
 
+    public Profesor() {
+    }
+
     public String getNombre() {
         return nombre;
     }

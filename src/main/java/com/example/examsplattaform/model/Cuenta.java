@@ -13,6 +13,9 @@ public class Cuenta implements Serializable {
         this.password = password;
     }
 
+    public Cuenta(){
+    }
+
     public String getUsuario() {
         return usuario;
     }

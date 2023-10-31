@@ -20,6 +20,9 @@ public class Estudiante extends Persona implements Serializable {
         this.cuenta=cuenta;
     }
 
+    public Estudiante(){
+    }
+
     public String getNombre() {
         return nombre;
     }

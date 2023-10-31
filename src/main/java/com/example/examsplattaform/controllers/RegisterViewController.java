@@ -39,6 +39,8 @@ public class RegisterViewController {
                 Profesor profesor  = new Profesor(tfName.getText(), tfApellido.getText(), tfCollege.getText(),tfId.getText());
                 profesor.setCuenta(new Cuenta(tfUser.getText(),pfPassword.getText()));
                 singleton.getPlataforma().registrarProfesor(profesor);
+                singleton.guardarResourceXML();
+                singleton.guardarResourceBinario();
                 main.inicilizarLogin();
             } catch (AccountException | AlreadyRegisteredUserException e) {
                 Alerta.saltarAlertaError(e.getMessage());
