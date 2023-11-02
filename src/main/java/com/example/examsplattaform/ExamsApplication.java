@@ -1,6 +1,9 @@
 package com.example.examsplattaform;
 
 import com.example.examsplattaform.controllers.*;
+import com.example.examsplattaform.model.Estudiante;
+import com.example.examsplattaform.model.Persona;
+import com.example.examsplattaform.model.Profesor;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -37,12 +40,12 @@ public class ExamsApplication extends Application {
         stage.show();
     }
 
-    public void abrirSelector(boolean isLogin) throws IOException {
+    public void abrirSelector(boolean isLogin, Persona persona) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(ExamsApplication.class.getResource("selection-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         scene.getStylesheets().add(Objects.requireNonNull(ExamsApplication.class.getResource("styles.css")).toExternalForm());
         SelectionViewController controller = fxmlLoader.getController();
-        controller.setMain(this, isLogin);
+        controller.setMain(this, isLogin, persona);
         stage.setTitle("Selector");
         stage.setScene(scene);
         stage.show();
@@ -69,10 +72,26 @@ public class ExamsApplication extends Application {
         stage.show();
     }
 
-    public void abrirPanelProfesor() {
+    public void abrirPanelProfesor(Profesor profesorLogeado) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(ExamsApplication.class.getResource("profesorPanel-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        scene.getStylesheets().add(Objects.requireNonNull(ExamsApplication.class.getResource("styles.css")).toExternalForm());
+        ProfesorPanelViewController controller = fxmlLoader.getController();
+        controller.setMain(this, profesorLogeado);
+        stage.setTitle("Bienvenido "+ profesorLogeado.getNombre());
+        stage.setScene(scene);
+        stage.show();
     }
 
-    public void abrirPanelEstudiante() {
+    public void abrirPanelEstudiante(Estudiante estudianteLogeado) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(ExamsApplication.class.getResource("studentPanel-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        scene.getStylesheets().add(Objects.requireNonNull(ExamsApplication.class.getResource("styles.css")).toExternalForm());
+        StudentPanelViewController controller = fxmlLoader.getController();
+        controller.setMain(this, estudianteLogeado);
+        stage.setTitle("Bienvenido "+ estudianteLogeado.getNombre());
+        stage.setScene(scene);
+        stage.show();
     }
     private void intentarCerrar(){
         if(Alerta.saltarAlertaConfirmacion("ESTA APUNTO DE CERRAR","Usted está a punto de salir") == ButtonType.OK){

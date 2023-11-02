@@ -5,16 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2bda76d7-8eec-4490-9aac-a390df4722e5" name="Changes" comment="First steps on the creation of the project">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/ProfesorPanelViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/StudentPanelViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/examsplattaform/profesorPanel-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/examsplattaform/studentPanel-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/ExamsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/ExamsApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/archivo/Log.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/archivo/Log.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/RegisterStudentViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/RegisterStudentViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/RegisterViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/RegisterViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Estudiante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Estudiante.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/archivo/model.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/archivo/model.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/LoginViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/LoginViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/ModelFactoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/ModelFactoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/SelectionViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/SelectionViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Plataforma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Plataforma.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/examsplattaform/registerStudent-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/examsplattaform/registerStudent-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/examsplattaform/registerTeacher-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/examsplattaform/registerTeacher-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/examsplattaform/selection-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/examsplattaform/selection-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,13 +115,22 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/examsplattaform/ExamsApplication.java</url>
-          <line>39</line>
-          <properties class="com.example.examsplattaform.ExamsApplication" method="abrirSelector">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/SelectionViewController.java</url>
+          <line>31</line>
+          <properties class="com.example.examsplattaform.controllers.SelectionViewController" method="onContinueButtonClick">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
-          <option name="timeStamp" value="1" />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/LoginViewController.java</url>
+          <line>27</line>
+          <properties class="com.example.examsplattaform.controllers.LoginViewController" method="loginButtonAction">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

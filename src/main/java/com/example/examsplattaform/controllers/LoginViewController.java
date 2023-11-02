@@ -2,7 +2,9 @@ package com.example.examsplattaform.controllers;
 
 import com.example.examsplattaform.ExamsApplication;
 import com.example.examsplattaform.exceptions.AccountException;
+import com.example.examsplattaform.exceptions.UserNotFoundException;
 import com.example.examsplattaform.model.Cuenta;
+import com.example.examsplattaform.model.Persona;
 import javafx.event.ActionEvent;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -20,16 +22,16 @@ public class LoginViewController {
     }
 
     public void registerButtonClick(ActionEvent event) throws IOException {
-        main.abrirSelector(false);
+        main.abrirSelector(false,null);
     }
 
     public void loginButtonAction(ActionEvent event) throws IOException {
         if (verificarCampos(usernameField.getText(), passwordField.getText())){
             Cuenta cuenta = new Cuenta(usernameField.getText(), passwordField.getText());
             try{
-                singleton.ingresar(cuenta);
-                main.abrirSelector(true);
-            }catch (AccountException e){
+                Persona persona = singleton.getPlataforma().iniciarSesion(cuenta);
+                main.abrirSelector(true, persona);
+            } catch (UserNotFoundException e) {
                 Alerta.saltarAlertaError(e.getMessage());
             }
         }

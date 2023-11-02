@@ -1,35 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <java version="19.0.2" class="java.beans.XMLDecoder">
  <object class="com.example.examsplattaform.model.Plataforma" id="Plataforma0">
-  <void property="estudiantesRegistrados">
+  <void property="cuentaList">
    <void method="add">
-    <object class="com.example.examsplattaform.model.Estudiante" id="Estudiante0">
-     <void property="apellido">
-      <string>Garcia</string>
+    <object class="com.example.examsplattaform.model.Cuenta" id="Cuenta0">
+     <void property="password">
+      <string>ana123</string>
      </void>
-     <void property="cedula">
-      <string>1004917</string>
-     </void>
-     <void property="cuenta">
-      <object class="com.example.examsplattaform.model.Cuenta">
-       <void property="password">
-        <string>ana123</string>
+     <void property="personaAsociada">
+      <object class="com.example.examsplattaform.model.Estudiante" id="Estudiante0">
+       <void property="apellido">
+        <string>Garcia</string>
        </void>
-       <void property="personaAsociada">
-        <object idref="Estudiante0"/>
+       <void property="cedula">
+        <string>1003</string>
        </void>
-       <void property="usuario">
-        <string>kevinmitsi</string>
+       <void property="cuenta">
+        <object idref="Cuenta0"/>
+       </void>
+       <void property="examenesRealizados">
+        <object class="java.util.HashMap"/>
+       </void>
+       <void property="nombre">
+        <string>Kevin</string>
        </void>
       </object>
      </void>
-     <void property="examenesRealizados">
-      <object class="java.util.HashMap"/>
-     </void>
-     <void property="nombre">
-      <string>Kevin</string>
+     <void property="usuario">
+      <string>kevinmitsi</string>
      </void>
     </object>
+   </void>
+   <void method="add">
+    <object class="com.example.examsplattaform.model.Cuenta" id="Cuenta1">
+     <void property="password">
+      <string>123</string>
+     </void>
+     <void property="personaAsociada">
+      <object class="com.example.examsplattaform.model.Estudiante" id="Estudiante1">
+       <void property="apellido">
+        <string>Duque</string>
+       </void>
+       <void property="cedula">
+        <string>1092</string>
+       </void>
+       <void property="cuenta">
+        <object idref="Cuenta1"/>
+       </void>
+       <void property="examenesRealizados">
+        <object class="java.util.HashMap"/>
+       </void>
+       <void property="nombre">
+        <string>Ana</string>
+       </void>
+      </object>
+     </void>
+     <void property="usuario">
+      <string>ana</string>
+     </void>
+    </object>
+   </void>
+  </void>
+  <void property="estudiantesRegistrados">
+   <void method="add">
+    <object idref="Estudiante0"/>
+   </void>
+   <void method="add">
+    <object idref="Estudiante1"/>
    </void>
   </void>
  </object>
