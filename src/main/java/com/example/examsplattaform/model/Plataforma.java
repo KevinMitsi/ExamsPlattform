@@ -120,6 +120,7 @@ public class Plataforma implements Serializable {
         else{
             if (verificarCuenta(profesor.getCuenta())){
                 profesresRegistrados.add(profesor);
+                cuentaList.add(profesor.getCuenta());
             }
         }
     }
@@ -137,16 +138,11 @@ public class Plataforma implements Serializable {
         else{
             if (verificarCuenta(estudiante.getCuenta())){
                 estudiantesRegistrados.add(estudiante);
+                cuentaList.add(estudiante.getCuenta());
             }
         }
     }
 
-    public void ingresar(Cuenta cuenta) throws AccountException{
-        if (cuentaList.contains(cuenta)){
-            throw new AccountException("Esta cuenta no se encuentra registrada");
-        }
-
-    }
 
     //----------------Private Methods for the internal functions ----------------------------------
 

@@ -11,10 +11,6 @@ public class ModelFactoryController {
 
     private Plataforma plataforma;
 
-    public void ingresar(Cuenta cuenta) throws AccountException {
-        plataforma.ingresar(cuenta);
-    }
-
     //------------------------------  Singleton ------------------------------------------------
     // Clase estatica oculta. Tan solo se instanciara el singleton una vez
     private static class SingletonHolder {
