@@ -41,6 +41,7 @@ public class RegisterStudentViewController {
                 singleton.getPlataforma().registrarEstudiante(estudiante);
                 singleton.guardarResourceXML();
                 singleton.guardarResourceBinario();
+                Alerta.saltarAlertaInformacion("Se ha registrado exitosamente en la aplicación");
                 main.inicilizarLogin();
             } catch (AccountException | AlreadyRegisteredUserException e) {
                 Alerta.saltarAlertaError(e.getMessage());

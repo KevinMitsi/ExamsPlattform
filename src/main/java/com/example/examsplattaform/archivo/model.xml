@@ -5,68 +5,42 @@
    <void method="add">
     <object class="com.example.examsplattaform.model.Cuenta" id="Cuenta0">
      <void property="password">
-      <string>ana123</string>
+      <string>123</string>
      </void>
      <void property="personaAsociada">
-      <object class="com.example.examsplattaform.model.Estudiante" id="Estudiante0">
+      <object class="com.example.examsplattaform.model.Profesor" id="Profesor0">
        <void property="apellido">
         <string>Garcia</string>
        </void>
        <void property="cedula">
-        <string>1003</string>
+        <string>1004</string>
+       </void>
+       <void property="colegio">
+        <string>UQ</string>
        </void>
        <void property="cuenta">
         <object idref="Cuenta0"/>
        </void>
-       <void property="examenesRealizados">
-        <object class="java.util.HashMap"/>
+       <void property="examenesCreados">
+        <object class="java.util.ArrayList"/>
        </void>
        <void property="nombre">
         <string>Kevin</string>
        </void>
-      </object>
-     </void>
-     <void property="usuario">
-      <string>kevinmitsi</string>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="com.example.examsplattaform.model.Cuenta" id="Cuenta1">
-     <void property="password">
-      <string>123</string>
-     </void>
-     <void property="personaAsociada">
-      <object class="com.example.examsplattaform.model.Estudiante" id="Estudiante1">
-       <void property="apellido">
-        <string>Duque</string>
-       </void>
-       <void property="cedula">
-        <string>1092</string>
-       </void>
-       <void property="cuenta">
-        <object idref="Cuenta1"/>
-       </void>
-       <void property="examenesRealizados">
-        <object class="java.util.HashMap"/>
-       </void>
-       <void property="nombre">
-        <string>Ana</string>
+       <void property="resueltos">
+        <object class="java.util.ArrayList"/>
        </void>
       </object>
      </void>
      <void property="usuario">
-      <string>ana</string>
+      <string>kevin</string>
      </void>
     </object>
    </void>
   </void>
-  <void property="estudiantesRegistrados">
+  <void property="profesresRegistrados">
    <void method="add">
-    <object idref="Estudiante0"/>
-   </void>
-   <void method="add">
-    <object idref="Estudiante1"/>
+    <object idref="Profesor0"/>
    </void>
   </void>
  </object>

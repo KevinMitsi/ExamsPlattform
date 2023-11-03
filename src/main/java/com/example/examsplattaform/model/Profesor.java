@@ -72,7 +72,7 @@ public class Profesor extends Persona implements Serializable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Profesor profesor)) return false;
-        return Objects.equals(getNombre(), profesor.getNombre()) && Objects.equals(getCedula(), profesor.getCedula());
+        return Objects.equals(getCedula(), profesor.getCedula());
     }
 
     @Override

@@ -92,17 +92,24 @@ public class Plataforma implements Serializable {
 
     /**
      * This method allows users to join the application
-     * @param cuenta represents the account that will try to join into de app
+     * @param usuario represents the user of the account that will try to join into de app
+     * @param contrasena represents the password of the account
      * @return every account has an assigned person, this return will allow the application open the right window of every user*
      * @throws UserNotFoundException not found account in the app
      */
 
-    public Persona iniciarSesion(Cuenta cuenta) throws UserNotFoundException {
-        if (cuentaList.contains(cuenta)){
-            return cuenta.getPersonaAsociada();
+    public Persona iniciarSesion(String usuario, String contrasena) throws UserNotFoundException {
+        Cuenta cuenta = new Cuenta(usuario, contrasena);
+        if (!cuentaList.contains(cuenta)){
+            throw new UserNotFoundException("Usuario no encontrado");
         }
         else {
-            throw new UserNotFoundException("Usuario no encontrado");
+            for (Cuenta account: cuentaList) {
+                if (account.getUsuario().equals(usuario)&&account.getPassword().equals(contrasena)){
+                    cuenta=account;
+                }
+            }
+            return cuenta.getPersonaAsociada();
         }
     }
 
