@@ -5,18 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2bda76d7-8eec-4490-9aac-a390df4722e5" name="Changes" comment="new additions to login and register">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/ExamZoomViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/ExamsCreationViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/examsplattaform/examZoom-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/examsplattaform/examsCreation-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/ExamsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/ExamsApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/archivo/Log.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/archivo/Log.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/archivo/model.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/archivo/model.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/LoginViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/LoginViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/ModelFactoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/ModelFactoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/RegisterStudentViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/RegisterStudentViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/RegisterViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/RegisterViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/SelectionViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/SelectionViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/StudentPanelViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/StudentPanelViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Cuenta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Cuenta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Examen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Examen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Plataforma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Plataforma.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Profesor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Profesor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/examsplattaform/studentPanel-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/examsplattaform/studentPanel-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -100,7 +100,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698933287315</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="new additions to login and register">
+      <option name="closed" value="true" />
+      <created>1698971091596</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1698971091596</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

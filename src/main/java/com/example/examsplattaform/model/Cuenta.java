@@ -44,12 +44,12 @@ public class Cuenta implements Serializable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Cuenta cuenta)) return false;
-        return Objects.equals(getUsuario(), cuenta.getUsuario());
+        return Objects.equals(getUsuario(), cuenta.getUsuario()) && Objects.equals(getPassword(), cuenta.getPassword());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getUsuario());
+        return Objects.hash(getUsuario(), getPassword());
     }
 
     @Override

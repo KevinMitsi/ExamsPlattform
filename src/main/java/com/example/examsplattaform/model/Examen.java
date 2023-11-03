@@ -16,8 +16,9 @@ public class Examen implements Serializable {
     private float totalPuntos;
     private float puntoXPregunta;
 
-    public Examen(String titulo, String subtitulo, String materia,float totalPuntos) {
+    public Examen(String titulo, String subtitulo, String materia,float totalPuntos, String clave) {
         this.titulo = titulo;
+        this.clave = clave;
         this.subtitulo = subtitulo;
         this.totalPuntos = totalPuntos;
         this.materia=materia;
