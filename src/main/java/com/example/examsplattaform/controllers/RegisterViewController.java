@@ -37,10 +37,13 @@ public class RegisterViewController {
         if (verificarCampos()){
             try{
                 Profesor profesor  = new Profesor(tfName.getText(), tfApellido.getText(), tfCollege.getText(),tfId.getText());
-                profesor.setCuenta(new Cuenta(tfUser.getText(),pfPassword.getText()));
+                Cuenta cuenta = new Cuenta(tfUser.getText(),pfPassword.getText());
+                cuenta.setPersonaAsociada(profesor);
+                profesor.setCuenta(cuenta);
                 singleton.getPlataforma().registrarProfesor(profesor);
                 singleton.guardarResourceXML();
                 singleton.guardarResourceBinario();
+                Alerta.saltarAlertaInformacion("Se ha registrado exitosamente en la aplicación");
                 main.inicilizarLogin();
             } catch (AccountException | AlreadyRegisteredUserException e) {
                 Alerta.saltarAlertaError(e.getMessage());

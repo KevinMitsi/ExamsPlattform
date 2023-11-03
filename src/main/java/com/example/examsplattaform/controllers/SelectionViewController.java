@@ -45,8 +45,7 @@ public class SelectionViewController {
             if(isLogin){
                 if (cbOptions.getValue().equals("Profesor")&&personaLogeada instanceof Profesor){
                     main.abrirPanelProfesor((Profesor) personaLogeada);
-                }
-                if (cbOptions.getValue().equals("Estudiante")&& personaLogeada instanceof Estudiante){
+                } else if (cbOptions.getValue().equals("Estudiante")&& personaLogeada instanceof Estudiante) {
                     main.abrirPanelEstudiante((Estudiante) personaLogeada);
                 }
                 else{

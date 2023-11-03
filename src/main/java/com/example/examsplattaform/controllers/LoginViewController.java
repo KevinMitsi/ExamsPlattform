@@ -27,9 +27,8 @@ public class LoginViewController {
 
     public void loginButtonAction(ActionEvent event) throws IOException {
         if (verificarCampos(usernameField.getText(), passwordField.getText())){
-            Cuenta cuenta = new Cuenta(usernameField.getText(), passwordField.getText());
             try{
-                Persona persona = singleton.getPlataforma().iniciarSesion(cuenta);
+                Persona persona = singleton.getPlataforma().iniciarSesion(usernameField.getText(), passwordField.getText());
                 main.abrirSelector(true, persona);
             } catch (UserNotFoundException e) {
                 Alerta.saltarAlertaError(e.getMessage());

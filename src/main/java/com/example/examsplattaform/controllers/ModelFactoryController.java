@@ -68,7 +68,7 @@ public class ModelFactoryController {
         Persistencia.guardarRecursoDomainXML(plataforma);
     }
 
-    private void inicializarDatos() throws IOException {
+    private void inicializarDatos() {
         plataforma = new Plataforma();
         System.out.println("Domain inicializado " + plataforma);
     }
