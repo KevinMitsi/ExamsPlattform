@@ -33,9 +33,43 @@
       </object>
      </void>
      <void property="usuario">
-      <string>kevin</string>
+      <string>kevinmitsi</string>
      </void>
     </object>
+   </void>
+   <void method="add">
+    <object class="com.example.examsplattaform.model.Cuenta" id="Cuenta1">
+     <void property="password">
+      <string>123</string>
+     </void>
+     <void property="personaAsociada">
+      <object class="com.example.examsplattaform.model.Estudiante" id="Estudiante0">
+       <void property="apellido">
+        <string>Duque</string>
+       </void>
+       <void property="cedula">
+        <string>1092</string>
+       </void>
+       <void property="cuenta">
+        <object idref="Cuenta1"/>
+       </void>
+       <void property="examenesRealizados">
+        <object class="java.util.HashMap"/>
+       </void>
+       <void property="nombre">
+        <string>Ana</string>
+       </void>
+      </object>
+     </void>
+     <void property="usuario">
+      <string>anas</string>
+     </void>
+    </object>
+   </void>
+  </void>
+  <void property="estudiantesRegistrados">
+   <void method="add">
+    <object idref="Estudiante0"/>
    </void>
   </void>
   <void property="profesresRegistrados">

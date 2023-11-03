@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.examsplattaform.controllers.ExamsCreationViewController"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <Label alignment="CENTER" layoutX="10.0" layoutY="41.0" text="Creación de tu Examen">
+            <font>
+                <Font name="System Bold" size="28.0" />
+            </font>
+        </Label>
+        <Label layoutX="113.0" layoutY="81.0" text="Titulo del Examen:" />
+        <TextField fx:id="tfTittle" layoutX="75.0" layoutY="99.0" prefHeight="26.0" prefWidth="168.0" promptText="ingrese el título del Examen" />
+        <Label layoutX="103.0" layoutY="125.0" text="Subtítulo del Examen:" />
+        <TextField fx:id="tfSubtittle" layoutX="77.0" layoutY="143.0" prefHeight="26.0" prefWidth="168.0" promptText="ingrese el subtítulo" />
+        <Label layoutX="118.0" layoutY="169.0" text="Materia o Tema:" />
+        <TextField fx:id="tfSubject" layoutX="77.0" layoutY="187.0" prefHeight="26.0" prefWidth="168.0" promptText="Materia o tema del Examen" />
+        <Label layoutX="124.0" layoutY="213.0" text="Nota máxima:" />
+        <TextField fx:id="tfMaxGrade" layoutX="77.0" layoutY="231.0" prefHeight="26.0" prefWidth="168.0" promptText="Escriba la nota máxima" />
+        <Button fx:id="btnCreate" layoutX="139.0" layoutY="281.0" mnemonicParsing="false" onAction="#onCrearClick" text="Crear" />
+        <Hyperlink fx:id="hlBack" layoutX="10.0" layoutY="3.0" onAction="#onBackClicked" text="Volver" textAlignment="CENTER" underline="true" />
+    </children>
+
+</AnchorPane>

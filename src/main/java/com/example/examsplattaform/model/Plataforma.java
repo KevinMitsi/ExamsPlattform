@@ -165,6 +165,11 @@ public class Plataforma implements Serializable {
             throw new AccountException("Esta cuenta ya está registrada");
         }
         else{
+            for (Cuenta acc: cuentaList) {
+                if (acc.getUsuario().equals(cuenta.getUsuario())){
+                    throw new AccountException("Este nombre de usuario ya estpa registrado");
+                }
+            }
             return true;
         }
     }

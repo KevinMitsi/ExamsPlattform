@@ -2,6 +2,7 @@ package com.example.examsplattaform;
 
 import com.example.examsplattaform.controllers.*;
 import com.example.examsplattaform.model.Estudiante;
+import com.example.examsplattaform.model.Examen;
 import com.example.examsplattaform.model.Persona;
 import com.example.examsplattaform.model.Profesor;
 import javafx.application.Application;
@@ -103,4 +104,20 @@ public class ExamsApplication extends Application {
         launch();
     }
 
+    public void expandirExamenSeleccionado(Examen examenSeleccionado,Estudiante estudiante, Profesor profesor) {
+        FXMLLoader fxmlLoader = new FXMLLoader(ExamsApplication.class.getResource("examZoom-view.fxml"));
+        Scene scene = null;
+        try {
+            scene = new Scene(fxmlLoader.load());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        scene.getStylesheets().add(Objects.requireNonNull(ExamsApplication.class.getResource("styles.css")).toExternalForm());
+        ExamZoomViewController controller = fxmlLoader.getController();
+        controller.setMain(this, estudiante, profesor);
+        stage.setTitle("Ampliacion de Examen: " +examenSeleccionado.getTitulo());
+        stage.setScene(scene);
+        stage.show();
+
+    }
 }
