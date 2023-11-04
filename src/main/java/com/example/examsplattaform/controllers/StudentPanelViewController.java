@@ -69,5 +69,7 @@ public class StudentPanelViewController {
     private void fillObservableList() {
         examenObservableMap.putAll(estudianteLogeado.getExamenesRealizados());
         examenObservableList.addAll(examenObservableMap.values());
+        tableExams.getItems().clear();
+        tableExams.getItems().addAll(examenObservableList);
     }
 }

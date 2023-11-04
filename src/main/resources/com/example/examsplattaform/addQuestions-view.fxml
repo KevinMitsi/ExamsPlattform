@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="627.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.examsplattaform.controllers.AddQuestionsViewController">
+   <children>
+      <Button fx:id="btnMultiple" layoutX="14.0" layoutY="68.0" mnemonicParsing="false" onAction="#onBtnMultipleClick" prefHeight="26.0" prefWidth="574.0" text="Nueva Selección Multiple" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="209.0" layoutY="14.0" prefHeight="26.0" prefWidth="183.0" text="Creador de Preguntas" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Hyperlink fx:id="hlVolver" layoutX="11.0" layoutY="3.0" onAction="#onVolverClicked" text="Volver" underline="true" />
+      <Button fx:id="btnTrueFalse" layoutX="13.0" layoutY="100.0" mnemonicParsing="false" onAction="#onTrueFalseClick" prefHeight="26.0" prefWidth="574.0" text="Nueva Falso || Verdadero" />
+      <Button fx:id="btnOpenQuestion" layoutX="13.0" layoutY="134.0" mnemonicParsing="false" onAction="#onOpenQuestionClick" prefHeight="26.0" prefWidth="574.0" text="Nueva Pregunta Abierta" />
+      <ScrollPane fx:id="myScrollPane" layoutX="14.0" layoutY="170.0" prefHeight="413.0" prefWidth="574.0" />
+      <Button layoutX="271.0" layoutY="600.0" mnemonicParsing="false" text="Finalizar" />
+   </children>
+</AnchorPane>

@@ -120,4 +120,44 @@ public class ExamsApplication extends Application {
         stage.show();
 
     }
+
+    public void abrirCreadorPreguntasExamen(Profesor profesorLogeado, Examen examen) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(ExamsApplication.class.getResource("addQuestions-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        scene.getStylesheets().add(Objects.requireNonNull(ExamsApplication.class.getResource("styles.css")).toExternalForm());
+        AddQuestionsViewController controller = fxmlLoader.getController();
+        controller.setMain(this, profesorLogeado, examen);
+        stage.setTitle("Vamos a añadir las preguntas de tu examen");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void abrirCreadorExamenes(Profesor profesorLogeado) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(ExamsApplication.class.getResource("examsCreation-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        scene.getStylesheets().add(Objects.requireNonNull(ExamsApplication.class.getResource("styles.css")).toExternalForm());
+        ExamsCreationViewController controller = fxmlLoader.getController();
+        controller.setMain(this, profesorLogeado);
+        stage.setTitle("Vamos a añadir las preguntas de tu examen");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void abrirAgregarPreguntaMultiple(Profesor profesorLogeado, Examen examenCreado) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(ExamsApplication.class.getResource("examsCreation-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        scene.getStylesheets().add(Objects.requireNonNull(ExamsApplication.class.getResource("styles.css")).toExternalForm());
+        NewQuestionViewController controller = fxmlLoader.getController();
+        controller.setMain(this, profesorLogeado, examenCreado);
+        stage.setTitle("Vamos a añadir las preguntas de tu examen");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void abrirAgregarPreguntaTF(Profesor profesorLogeado, Examen examen) {
+
+    }
+    public void abrirAgregarPreguntaAbierta(Profesor profesorLogeado, Examen examen) {
+
+    }
 }

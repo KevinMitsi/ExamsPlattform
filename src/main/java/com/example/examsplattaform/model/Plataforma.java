@@ -2,6 +2,7 @@ package com.example.examsplattaform.model;
 
 import com.example.examsplattaform.exceptions.AccountException;
 import com.example.examsplattaform.exceptions.AlreadyRegisteredUserException;
+import com.example.examsplattaform.exceptions.ExamCreationException;
 import com.example.examsplattaform.exceptions.UserNotFoundException;
 
 import java.io.Serializable;
@@ -175,8 +176,13 @@ public class Plataforma implements Serializable {
     }
 
 
-
-
-
-
+    public void crearExamen(Profesor profesorLogeado, Examen examen) throws ExamCreationException {
+       if (profesorLogeado.getExamenesCreados().contains(examen)||examenList.containsValue(examen)){
+           throw new ExamCreationException("Este examen ya está creado");
+       }
+       else{
+           profesorLogeado.getExamenesCreados().add(examen);
+           examenList.put(String.valueOf(examen.getClave()),examen);
+       }
+    }
 }

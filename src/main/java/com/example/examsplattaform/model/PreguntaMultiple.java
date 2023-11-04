@@ -8,32 +8,20 @@ import java.util.Map;
 import java.util.Objects;
 
 public class PreguntaMultiple extends Pregunta implements Serializable {
-    private Image image;
-    private String titulo;
+   private String titulo;
     private String enunciado;
-    private Map<String,AbstractRespuesta> respuestas;
+    private Map<String,Repuesta> respuestas;
     private int id;
-    private AbstractRespuesta correcta;
+    private Repuesta correcta;
 
-    public PreguntaMultiple(Image image, String titulo, String enunciado, Image image1, String titulo1, String enunciado1, AbstractRespuesta correcta) {
-        super(image, titulo, enunciado);
-        this.image = image1;
-        this.titulo = titulo1;
-        this.enunciado = enunciado1;
-        this.respuestas = new HashMap<>();
+    public PreguntaMultiple(String titulo, String enunciado, Repuesta correcta) {
+        super(titulo, enunciado);
+       this.respuestas = new HashMap<>();
         this.id = hashCode();
         this.correcta = correcta;
     }
 
     public PreguntaMultiple() {
-    }
-
-    public Image getImage() {
-        return image;
-    }
-
-    public void setImage(Image image) {
-        this.image = image;
     }
 
     public String getTitulo() {
@@ -52,11 +40,11 @@ public class PreguntaMultiple extends Pregunta implements Serializable {
         this.enunciado = enunciado;
     }
 
-    public Map<String, AbstractRespuesta> getRespuestas() {
+    public Map<String, Repuesta> getRespuestas() {
         return respuestas;
     }
 
-    public void setRespuestas(Map<String, AbstractRespuesta> respuestas) {
+    public void setRespuestas(Map<String, Repuesta> respuestas) {
         this.respuestas = respuestas;
     }
 
@@ -68,11 +56,11 @@ public class PreguntaMultiple extends Pregunta implements Serializable {
         this.id = id;
     }
 
-    public AbstractRespuesta getCorrecta() {
+    public Repuesta getCorrecta() {
         return correcta;
     }
 
-    public void setCorrecta(AbstractRespuesta correcta) {
+    public void setCorrecta(Repuesta correcta) {
         this.correcta = correcta;
     }
 

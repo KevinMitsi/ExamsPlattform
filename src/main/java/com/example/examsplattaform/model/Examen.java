@@ -1,5 +1,8 @@
 package com.example.examsplattaform.model;
 
+import com.example.examsplattaform.exceptions.PreguntaException;
+import javafx.scene.layout.VBox;
+
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
@@ -12,16 +15,18 @@ public class Examen implements Serializable {
     private String materia;
     private String clave;
     private Map<String, Pregunta>preguntas;
-
+    private int numeroPresentados;
     private float totalPuntos;
     private float puntoXPregunta;
 
-    public Examen(String titulo, String subtitulo, String materia,float totalPuntos, String clave) {
+    VBox container;
+
+    public Examen(String titulo, String subtitulo, String materia,float totalPuntos) {
         this.titulo = titulo;
-        this.clave = clave;
         this.subtitulo = subtitulo;
         this.totalPuntos = totalPuntos;
         this.materia=materia;
+        preguntas = new HashMap<>();
         this.id=hashCode();
     }
 
@@ -93,6 +98,22 @@ public class Examen implements Serializable {
         this.materia = materia;
     }
 
+    public int getNumeroPresentados() {
+        return numeroPresentados;
+    }
+
+    public void setNumeroPresentados(int numeroPresentados) {
+        this.numeroPresentados = numeroPresentados;
+    }
+
+    public VBox getContainer() {
+        return container;
+    }
+
+    public void setContainer(VBox container) {
+        this.container = container;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -103,5 +124,14 @@ public class Examen implements Serializable {
     @Override
     public int hashCode() {
         return Objects.hash(getId(), getTitulo(), getClave(), getPreguntas());
+    }
+
+    public void agregarPregunta(Pregunta pregunta) throws PreguntaException {
+        if (preguntas.containsValue(pregunta)){
+            throw new PreguntaException("Esta pregunta ya está creada");
+        }
+        else{
+            preguntas.put(String.valueOf(preguntas.size()),pregunta);
+        }
     }
 }
