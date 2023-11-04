@@ -6,21 +6,15 @@ import java.io.Serializable;
 import java.util.Objects;
 
 public abstract class Pregunta implements Serializable {
-    private Image image;
     private  String titulo;
     private  String enunciado;
 
-    public Pregunta(Image image, String titulo, String enunciado) {
-        this.image = image;
+    public Pregunta(String titulo, String enunciado) {
         this.titulo = titulo;
         this.enunciado = enunciado;
     }
 
     public Pregunta() {
-    }
-
-    public Image getImage() {
-        return image;
     }
 
     public String getTitulo() {

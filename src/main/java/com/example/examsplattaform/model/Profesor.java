@@ -14,15 +14,12 @@ public class Profesor extends Persona implements Serializable {
     private Cuenta cuenta;
 
     private List<Examen>examenesCreados;
-    private List<Examen>resueltos;
-
     public Profesor(String nombre, String apellido, String colegio, String cedula) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.colegio = colegio;
         this.cedula = cedula;
         examenesCreados= new ArrayList<>();
-        resueltos = new ArrayList<>();
     }
 
     public Profesor() {
@@ -88,11 +85,4 @@ public class Profesor extends Persona implements Serializable {
         this.examenesCreados = examenesCreados;
     }
 
-    public List<Examen> getResueltos() {
-        return resueltos;
-    }
-
-    public void setResueltos(List<Examen> resueltos) {
-        this.resueltos = resueltos;
-    }
 }

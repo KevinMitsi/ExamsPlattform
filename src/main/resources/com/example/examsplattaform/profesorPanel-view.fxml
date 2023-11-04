@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.examsplattaform.controllers.ProfesorPanelViewController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="405.0" prefWidth="414.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.examsplattaform.controllers.ProfesorPanelViewController">
+   <children>
+      <Label layoutX="158.0" layoutY="8.0" text="Tu Panel">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Hyperlink fx:id="hlVolver" layoutX="12.0" layoutY="14.0" onAction="#onVolverLinkClick" text="Volver" underline="true" />
+      <TableView fx:id="tableExams" layoutX="12.0" layoutY="132.0" onDragDetected="#onDragItemTable" prefHeight="258.0" prefWidth="390.0">
+        <columns>
+          <TableColumn fx:id="colNombreExam" prefWidth="175.99999713897705" text="Nombre" />
+          <TableColumn fx:id="colMateriaExam" prefWidth="136.80006408691406" text="Materia" />
+            <TableColumn fx:id="colNumberPresentados" prefWidth="78.4000244140625" text="Presentados" />
+        </columns>
+      </TableView>
+      <Label layoutX="14.0" layoutY="97.0" text="Examenes creados:" />
+      <Button fx:id="btnNewExamen" layoutX="256.0" layoutY="92.0" mnemonicParsing="false" onAction="#onNewExamenClick" prefHeight="26.0" prefWidth="142.0" text="Nuevo examen" />
+   </children>
 </AnchorPane>
