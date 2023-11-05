@@ -16,8 +16,6 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
 
-import java.util.HashMap;
-import java.util.Iterator;
 
 public class StudentPanelViewController {
     ObservableMap<String, Examen>examenObservableMap;

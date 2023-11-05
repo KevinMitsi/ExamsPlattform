@@ -144,7 +144,7 @@ public class ExamsApplication extends Application {
     }
 
     public void abrirAgregarPreguntaMultiple(Profesor profesorLogeado, Examen examenCreado) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(ExamsApplication.class.getResource("examsCreation-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(ExamsApplication.class.getResource("newQuestion-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         scene.getStylesheets().add(Objects.requireNonNull(ExamsApplication.class.getResource("styles.css")).toExternalForm());
         NewQuestionViewController controller = fxmlLoader.getController();
@@ -154,10 +154,36 @@ public class ExamsApplication extends Application {
         stage.show();
     }
 
-    public void abrirAgregarPreguntaTF(Profesor profesorLogeado, Examen examen) {
+    public void abrirAgregarPreguntaTF(Profesor profesorLogeado, Examen examen) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(ExamsApplication.class.getResource("newTFQuestion-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        scene.getStylesheets().add(Objects.requireNonNull(ExamsApplication.class.getResource("styles.css")).toExternalForm());
+        NewTFQuestionViewController controller = fxmlLoader.getController();
+        controller.setMain(this, profesorLogeado, examen);
+        stage.setTitle("Vamos a añadir las preguntas de tu examen");
+        stage.setScene(scene);
+        stage.show();
 
     }
-    public void abrirAgregarPreguntaAbierta(Profesor profesorLogeado, Examen examen) {
+    public void abrirAgregarPreguntaAbierta(Profesor profesorLogeado, Examen examen) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(ExamsApplication.class.getResource("newOpenQuestion-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        scene.getStylesheets().add(Objects.requireNonNull(ExamsApplication.class.getResource("styles.css")).toExternalForm());
+        NewOpenQuestionViewController controller = fxmlLoader.getController();
+        controller.setMain(this, profesorLogeado, examen);
+        stage.setTitle("Vamos a añadir las preguntas de tu examen");
+        stage.setScene(scene);
+        stage.show();
+    }
 
+    public void abrirVisualizarExamenProfesor(Profesor profesorLogeado, Examen examenSeleccionado) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(ExamsApplication.class.getResource("visualizarExamenProfesor-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        scene.getStylesheets().add(Objects.requireNonNull(ExamsApplication.class.getResource("styles.css")).toExternalForm());
+        VisualizarExamenProfesorViewController controller = fxmlLoader.getController();
+        controller.setMain(this, profesorLogeado, examenSeleccionado);
+        stage.setTitle("Vamos a añadir las preguntas de tu examen");
+        stage.setScene(scene);
+        stage.show();
     }
 }
