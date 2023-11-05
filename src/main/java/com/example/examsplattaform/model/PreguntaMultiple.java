@@ -15,9 +15,10 @@ public class PreguntaMultiple extends Pregunta implements Serializable {
     private Repuesta correcta;
 
     public PreguntaMultiple(String titulo, String enunciado, Repuesta correcta) {
-        super(titulo, enunciado);
-       this.respuestas = new HashMap<>();
+        this.titulo = titulo;
+        this.enunciado=enunciado;
         this.id = hashCode();
+        this.respuestas = new HashMap<>();
         this.correcta = correcta;
     }
 

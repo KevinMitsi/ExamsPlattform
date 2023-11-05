@@ -1,23 +1,17 @@
 package com.example.examsplattaform.model;
-
-import javafx.scene.image.Image;
-
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 public class PreguntaAbierta extends Pregunta implements Serializable {
-    private Image image;
     private String titulo;
     private String enunciado;
     private int id;
     private List<String> respuestaCorrecta;
 
 
-    public PreguntaAbierta(Image image, String titulo, String enunciado, Image image1, String titulo1, String enunciado1) {
-        super(image, titulo, enunciado);
-        this.image = image1;
+    public PreguntaAbierta(String titulo1, String enunciado1) {
         this.titulo = titulo1;
         this.enunciado = enunciado1;
         this.id = hashCode();
@@ -25,14 +19,6 @@ public class PreguntaAbierta extends Pregunta implements Serializable {
     }
 
     public PreguntaAbierta() {
-    }
-
-    public Image getImage() {
-        return image;
-    }
-
-    public void setImage(Image image) {
-        this.image = image;
     }
 
     public String getTitulo() {

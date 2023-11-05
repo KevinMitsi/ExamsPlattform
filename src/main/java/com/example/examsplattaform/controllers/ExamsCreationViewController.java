@@ -38,6 +38,8 @@ public class ExamsCreationViewController {
             examen.setClave(clave);
              try{
              singleton.getPlataforma().crearExamen(profesorLogeado, examen);
+             singleton.guardarResourceXML();
+             singleton.guardarResourceBinario();
              main.abrirCreadorPreguntasExamen(profesorLogeado,examen);
              } catch (ExamCreationException e) {
                 Alerta.saltarAlertaError(e.getMessage());

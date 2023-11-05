@@ -10,6 +10,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class NewQuestionViewController {
 
@@ -29,15 +30,22 @@ public class NewQuestionViewController {
     Profesor profesorLogeado;
     Examen examenCreado;
     ExamsApplication main;
-    ModelFactoryController singleon = ModelFactoryController.getInstance();
+    ModelFactoryController singleton = ModelFactoryController.getInstance();
 
 
     public void onAddClick(ActionEvent event) {
         if (verificarCampos()){
+            radioA.setText("A. "+ tfRadioATeXT.getText());
+            radioB.setText("B. "+ tfRadioBTeXT.getText());
+            radioC.setText("C. "+ tfRadioCTeXT.getText());
+            radioD.setText("D. "+ tfRadioDTeXT.getText());
             try{
-                Repuesta respuesta = createRespuesta();
-                PreguntaMultiple pregunta = new PreguntaMultiple(tfTitle.getText(),tfSubtitle.getText(),respuesta);
+                Repuesta respuestaCorrecta = createRespuesta();
+                PreguntaMultiple pregunta = new PreguntaMultiple(tfTitle.getText(),tfSubtitle.getText(),respuestaCorrecta);
+                fillRepuestas(pregunta);
                 examenCreado.agregarPregunta(pregunta);
+                singleton.guardarResourceXML();
+                singleton.guardarResourceBinario();
                 main.abrirCreadorPreguntasExamen(profesorLogeado,examenCreado);
             } catch (PreguntaException e) {
                 Alerta.saltarAlertaError(e.getMessage());
@@ -45,9 +53,17 @@ public class NewQuestionViewController {
                 throw new RuntimeException(e);
             }
         }else{
-            Alerta.saltarAlertaError("HAY CAMPOS VACÍOS");
+            Alerta.saltarAlertaError("HAY CAMPOS VACÍOS O NO HA SELECCIONADO LA RESPUESTA CORRECTA");
         }
 
+    }
+
+    private void fillRepuestas(PreguntaMultiple preguntaMultiple) {
+        RadioButton[]radioButtons = {radioA,radioB,radioC,radioD};
+        for (int i = 0; i <4; i++) {
+            RadioButton myRadio = radioButtons[i];
+            preguntaMultiple.getRespuestas().put(String.valueOf(i),new Repuesta(String.valueOf(myRadio.getText().charAt(0)),myRadio.getText().substring(3)));
+        }
     }
 
     private Repuesta createRespuesta() {
@@ -58,26 +74,23 @@ public class NewQuestionViewController {
 
     private RadioButton findSelected() {
         if (radioA.isSelected()){
-            radioA.setText("A. "+ tfRadioATeXT.getText());
             return radioA;
         }
         if (radioB.isSelected()){
-            radioA.setText("B. "+ tfRadioBTeXT.getText());
             return radioB;
         }
         if (radioC.isSelected()){
-            radioA.setText("C. "+ tfRadioATeXT.getText());
             return radioC;
         }
         if (radioD.isSelected()){
-            radioA.setText("D. "+ tfRadioATeXT.getText());
             return radioC;
         }
         return null;
     }
 
 
-    public void onCancelClick(ActionEvent event) {
+    public void onCancelClick(ActionEvent event) throws IOException {
+        main.abrirCreadorPreguntasExamen(profesorLogeado, examenCreado);
     }
 
     public void setMain(ExamsApplication main, Profesor profesorLogeado, Examen examenCreado){

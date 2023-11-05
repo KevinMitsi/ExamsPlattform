@@ -1,18 +1,13 @@
 package com.example.examsplattaform.controllers;
-
 import com.example.examsplattaform.ExamsApplication;
 import com.example.examsplattaform.model.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.geometry.Pos;
 import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Iterator;
-
 public class AddQuestionsViewController {
     public Button btnMultiple;
     public Hyperlink hlVolver;
@@ -34,39 +29,52 @@ public class AddQuestionsViewController {
     }
 
     private void fillScrollPane() {
-        VBox vBox = new VBox();
-        for (Pregunta pregunta : examen.getPreguntas().values()) {
-            if (pregunta instanceof PreguntaMultiple) {
-                Label label = new Label(pregunta.getTitulo());
-                Text text = new Text(pregunta.getEnunciado());
-                ToggleGroup toggleGroup = new ToggleGroup();
-               vBox.getChildren().addAll(label,text);
-               for (Repuesta respuesta : ((PreguntaMultiple) pregunta).getRespuestas().values()) {
-                    RadioButton radioButton = new RadioButton(respuesta.getLetra()+" "+respuesta.getDescripcion());
-                    radioButton.setId("opcion"+respuesta.getLetra());
-                    radioButton.setToggleGroup(toggleGroup);
-                    vBox.getChildren().add(radioButton);
-                }
+        VBox mainVBox = new VBox();
+        mainVBox.setSpacing(10); // Espaciado entre las preguntas
 
-            }
-            if (pregunta instanceof PreguntaAbierta){
-                Label label = new Label(pregunta.getTitulo());
-                Text text = new Text(pregunta.getEnunciado());
-                TextArea textArea = new TextArea();
-                textArea.setPromptText("Diigete su respuesta");
-                vBox.getChildren().addAll(label,text,textArea);
-            }
-            if (pregunta instanceof PreguntaTF){
+        for (Pregunta pregunta : examen.getPreguntas().values()) {
+            VBox preguntaVBox = new VBox();
+            preguntaVBox.setSpacing(5); // Espaciado entre los elementos de la pregunta
+
+            if (pregunta instanceof PreguntaMultiple) {
+                Label titleLabel = new Label("Título: " + pregunta.getTitulo());
+                Text enunciadoText = new Text("Enunciado: " + pregunta.getEnunciado());
                 ToggleGroup toggleGroup = new ToggleGroup();
-                Label label = new Label(pregunta.getTitulo());
-                Text text = new Text(pregunta.getEnunciado());
-                RadioButton t = new RadioButton("TRUE");
-                RadioButton f = new RadioButton("FALSE");
-                t.setToggleGroup(toggleGroup);
-                f.setToggleGroup(toggleGroup);
-                vBox.getChildren().addAll(label,text,t,f);
+
+                preguntaVBox.getChildren().addAll(titleLabel, enunciadoText);
+                for (Repuesta respuesta : ((PreguntaMultiple) pregunta).getRespuestas().values()) {
+                    RadioButton radioButton = new RadioButton(respuesta.getLetra() + ". " + respuesta.getDescripcion());
+                    radioButton.setId("opcion" + respuesta.getLetra());
+                    radioButton.setToggleGroup(toggleGroup);
+                    preguntaVBox.getChildren().add(radioButton);
+                }
+            } else if (pregunta instanceof PreguntaAbierta) {
+                StringBuilder keys = new StringBuilder();
+                Label titleLabel = new Label("Título: " + pregunta.getTitulo());
+                Text enunciadoText = new Text("Enunciado: " + pregunta.getEnunciado());
+                TextArea textArea = new TextArea();
+                textArea.setPromptText("Escribe tu respuesta aquí");
+                for (String clave:((PreguntaAbierta) pregunta).getRespuestaCorrecta()) {
+                    keys.append("{").append(clave).append("},");
+                }
+                Text myKeys = new Text("Key words: "+keys);
+                textArea.setWrapText(true);
+                preguntaVBox.getChildren().addAll(titleLabel, enunciadoText, textArea, myKeys);
+            } else if (pregunta instanceof PreguntaTF) {
+                Label titleLabel = new Label("Título: " + pregunta.getTitulo());
+                Text enunciadoText = new Text("Enunciado: " + pregunta.getEnunciado());
+                ToggleGroup toggleGroup = new ToggleGroup();
+                RadioButton trueRadioButton = new RadioButton("TRUE");
+                RadioButton falseRadioButton = new RadioButton("FALSE");
+                trueRadioButton.setToggleGroup(toggleGroup);
+                falseRadioButton.setToggleGroup(toggleGroup);
+
+                preguntaVBox.getChildren().addAll(titleLabel, enunciadoText, trueRadioButton, falseRadioButton);
             }
+
+            mainVBox.getChildren().add(preguntaVBox);
         }
+        myScrollPane.setContent(mainVBox);
     }
 
     @FXML
@@ -78,11 +86,11 @@ public class AddQuestionsViewController {
         main.abrirPanelProfesor(profesorLogeado);
     }
     @FXML
-    public void onTrueFalseClick(ActionEvent event) {
+    public void onTrueFalseClick(ActionEvent event) throws IOException {
         main.abrirAgregarPreguntaTF(profesorLogeado,examen);
     }
     @FXML
-    public void onOpenQuestionClick(ActionEvent event) {
+    public void onOpenQuestionClick(ActionEvent event) throws IOException{
         main.abrirAgregarPreguntaAbierta(profesorLogeado,examen);
     }
 }

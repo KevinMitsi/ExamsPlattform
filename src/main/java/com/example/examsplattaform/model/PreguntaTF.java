@@ -6,31 +6,19 @@ import java.io.Serializable;
 import java.util.Objects;
 
 public class PreguntaTF extends Pregunta implements Serializable {
-    private Image image;
     private String titulo;
     private String enunciado;
     private int id;
     private boolean value;
 
-    public PreguntaTF(Image image, String titulo, String enunciado, Image image1, String titulo1, String enunciado1, boolean value) {
-        super(image, titulo, enunciado);
-        this.image = image1;
-        this.titulo = titulo1;
-        this.enunciado = enunciado1;
+    public PreguntaTF(String titulo, String enunciado, boolean value) {
+        this.titulo =titulo;
+        this.enunciado=enunciado;
         this.id = hashCode();
         this.value = value;
     }
 
     public PreguntaTF() {
-    }
-
-    public Image getImage() {
-        return image;
-    }
-
-
-    public void setImage(Image image) {
-        this.image = image;
     }
 
     public String getTitulo() {

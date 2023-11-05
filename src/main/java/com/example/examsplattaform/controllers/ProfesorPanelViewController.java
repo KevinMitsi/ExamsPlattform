@@ -47,7 +47,10 @@ public class ProfesorPanelViewController {
         main.inicilizarLogin();
     }
 
-    public void onDragItemTable(MouseEvent mouseEvent) {
+    public void onDragItemTable(MouseEvent mouseEvent) throws IOException {
+        if(examenSeleccionado!=null){
+            main.abrirVisualizarExamenProfesor(profesorLogeado,examenSeleccionado);
+        }
     }
 
     public void onNewExamenClick(ActionEvent event) throws IOException {
