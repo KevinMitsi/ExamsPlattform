@@ -16,6 +16,6 @@
       <Button fx:id="btnTrueFalse" layoutX="13.0" layoutY="100.0" mnemonicParsing="false" onAction="#onTrueFalseClick" prefHeight="26.0" prefWidth="574.0" text="Nueva Falso || Verdadero" />
       <Button fx:id="btnOpenQuestion" layoutX="13.0" layoutY="134.0" mnemonicParsing="false" onAction="#onOpenQuestionClick" prefHeight="26.0" prefWidth="574.0" text="Nueva Pregunta Abierta" />
       <ScrollPane fx:id="myScrollPane" layoutX="14.0" layoutY="170.0" prefHeight="413.0" prefWidth="574.0" />
-      <Button layoutX="271.0" layoutY="600.0" mnemonicParsing="false" text="Finalizar" />
+      <Button fx:id="btnFinalizar" layoutX="271.0" layoutY="600.0" mnemonicParsing="false" onAction="#onFinalizarBurronClick" text="Finalizar" />
    </children>
 </AnchorPane>

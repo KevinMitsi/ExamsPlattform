@@ -138,7 +138,7 @@ public class ExamsApplication extends Application {
         scene.getStylesheets().add(Objects.requireNonNull(ExamsApplication.class.getResource("styles.css")).toExternalForm());
         ExamsCreationViewController controller = fxmlLoader.getController();
         controller.setMain(this, profesorLogeado);
-        stage.setTitle("Vamos a añadir las preguntas de tu examen");
+        stage.setTitle("Nuevo examen");
         stage.setScene(scene);
         stage.show();
     }
@@ -149,7 +149,7 @@ public class ExamsApplication extends Application {
         scene.getStylesheets().add(Objects.requireNonNull(ExamsApplication.class.getResource("styles.css")).toExternalForm());
         NewQuestionViewController controller = fxmlLoader.getController();
         controller.setMain(this, profesorLogeado, examenCreado);
-        stage.setTitle("Vamos a añadir las preguntas de tu examen");
+        stage.setTitle("Nueva Pregunta Múltiple");
         stage.setScene(scene);
         stage.show();
     }
@@ -160,7 +160,7 @@ public class ExamsApplication extends Application {
         scene.getStylesheets().add(Objects.requireNonNull(ExamsApplication.class.getResource("styles.css")).toExternalForm());
         NewTFQuestionViewController controller = fxmlLoader.getController();
         controller.setMain(this, profesorLogeado, examen);
-        stage.setTitle("Vamos a añadir las preguntas de tu examen");
+        stage.setTitle("Nueva pregunta True or False");
         stage.setScene(scene);
         stage.show();
 
@@ -171,7 +171,7 @@ public class ExamsApplication extends Application {
         scene.getStylesheets().add(Objects.requireNonNull(ExamsApplication.class.getResource("styles.css")).toExternalForm());
         NewOpenQuestionViewController controller = fxmlLoader.getController();
         controller.setMain(this, profesorLogeado, examen);
-        stage.setTitle("Vamos a añadir las preguntas de tu examen");
+        stage.setTitle("Nueva Pregunta Abierta");
         stage.setScene(scene);
         stage.show();
     }
@@ -182,7 +182,7 @@ public class ExamsApplication extends Application {
         scene.getStylesheets().add(Objects.requireNonNull(ExamsApplication.class.getResource("styles.css")).toExternalForm());
         VisualizarExamenProfesorViewController controller = fxmlLoader.getController();
         controller.setMain(this, profesorLogeado, examenSeleccionado);
-        stage.setTitle("Vamos a añadir las preguntas de tu examen");
+        stage.setTitle("Ampliación del nuevo examen");
         stage.setScene(scene);
         stage.show();
     }
