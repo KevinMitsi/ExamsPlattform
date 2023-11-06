@@ -64,4 +64,8 @@ public class PreguntaAbierta extends Pregunta implements Serializable {
     public int hashCode() {
         return Objects.hash(getTitulo(), getEnunciado(), getId(), getRespuestaCorrecta());
     }
+    public boolean esRespuestaCorrecta(String respuestaUsuario) {
+        return respuestaCorrecta.contains(respuestaUsuario);
+    }
+
 }

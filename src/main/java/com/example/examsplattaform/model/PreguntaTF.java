@@ -64,4 +64,8 @@ public class PreguntaTF extends Pregunta implements Serializable {
     public int hashCode() {
         return Objects.hash(getTitulo(), getEnunciado(), getId(), isValue());
     }
+    public boolean esRespuestaCorrecta(boolean respuestaUsuario) {
+        return value == respuestaUsuario;
+    }
+
 }
