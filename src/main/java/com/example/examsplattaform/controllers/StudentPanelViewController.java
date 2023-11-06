@@ -16,6 +16,8 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
 
+import java.io.IOException;
+
 
 public class StudentPanelViewController {
     ObservableMap<String, Examen>examenObservableMap;
@@ -38,10 +40,14 @@ public class StudentPanelViewController {
 
 
     @FXML
-    public void onNewExamClick(ActionEvent event) {
+    public void onNewExamClick(ActionEvent event) throws IOException {
+        main.mostrarIngresarNuevoExamen(estudianteLogeado);
     }
     @FXML
-    public void onDragSelecttedItem(MouseEvent mouseEvent) {
+    public void onDragSelecttedItem(MouseEvent mouseEvent) throws IOException {
+        if (examenSeleccionado!=null){
+            main.abrirVisualizarExamenEstudiante(estudianteLogeado, examenSeleccionado);
+        }
     }
 
     @FXML
@@ -52,16 +58,6 @@ public class StudentPanelViewController {
         tableExams.getSelectionModel().selectedItemProperty().addListener((obs,oldSelection,newSelection)->{
             examenSeleccionado = newSelection;
         });
-
-        tableExams.setOnMouseClicked(mouseEvent -> {
-           if (examenSeleccionado!=null){
-               main.expandirExamenSeleccionado(examenSeleccionado,estudianteLogeado, null);
-           }
-           else{
-               Alerta.saltarAlertaError("Seleccione un elemento para expandir");
-           }
-        });
-
     }
 
     private void fillObservableList() {

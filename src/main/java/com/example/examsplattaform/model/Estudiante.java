@@ -1,5 +1,8 @@
 package com.example.examsplattaform.model;
 
+import com.example.examsplattaform.controllers.ModelFactoryController;
+import com.example.examsplattaform.exceptions.ExamenNotFoundException;
+
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
@@ -11,7 +14,7 @@ public class Estudiante extends Persona implements Serializable {
     private String cedula;
     private Map<String, Examen>examenesRealizados;
     private Cuenta cuenta;
-
+    ModelFactoryController singleton = ModelFactoryController.getInstance();
     public Estudiante(String nombre, String apellido, String cedula, Cuenta cuenta) {
         this.nombre = nombre;
         this.apellido = apellido;
@@ -82,5 +85,14 @@ public class Estudiante extends Persona implements Serializable {
                 ", apellido='" + apellido + '\'' +
                 ", cedula='" + cedula + '\'' +
                 '}';
+    }
+
+    public Examen presentarExamen(String text) throws ExamenNotFoundException {
+        if(singleton.getPlataforma().getExamenList().containsKey(text)){
+            return singleton.getPlataforma().getExamenList().get(text);
+        }
+        else {
+            throw new ExamenNotFoundException("Este examen no existe");
+        }
     }
 }

@@ -19,6 +19,7 @@ public class Examen implements Serializable {
     private int numeroPresentados;
     private float totalPuntos;
     private float puntoXPregunta;
+    private float notaEstudiante;
 
     VBox container;
 
@@ -30,6 +31,7 @@ public class Examen implements Serializable {
         preguntas = new HashMap<>();
         this.id=hashCode();
         this.isFinished = false;
+        this.notaEstudiante = 0;
     }
 
     public Examen() {
@@ -98,6 +100,14 @@ public class Examen implements Serializable {
 
     public void setMateria(String materia) {
         this.materia = materia;
+    }
+
+    public float getNotaEstudiante() {
+        return notaEstudiante;
+    }
+
+    public void setNotaEstudiante(float notaEstudiante) {
+        this.notaEstudiante = notaEstudiante;
     }
 
     public int getNumeroPresentados() {

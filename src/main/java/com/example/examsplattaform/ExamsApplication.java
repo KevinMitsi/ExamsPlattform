@@ -9,7 +9,10 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -182,6 +185,52 @@ public class ExamsApplication extends Application {
         scene.getStylesheets().add(Objects.requireNonNull(ExamsApplication.class.getResource("styles.css")).toExternalForm());
         VisualizarExamenProfesorViewController controller = fxmlLoader.getController();
         controller.setMain(this, profesorLogeado, examenSeleccionado);
+        stage.setTitle("Ampliación del nuevo examen");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void mostrarClave(Examen examenSeleccionado) {
+        Stage stageShow = new Stage();
+        AnchorPane root = new AnchorPane();
+        Label label = new Label("Tu clave es: ");
+        TextField txt = new TextField();
+        txt.setText(examenSeleccionado.getClave());
+        txt.setLayoutY(100);
+        root.getChildren().addAll(label,txt);
+        Scene scene = new Scene(root,250,250);
+        stageShow.setScene(scene);
+        stageShow.show();
+    }
+
+    public void abrirVisualizarExamenEstudiante(Estudiante estudianteLogeado, Examen examenSeleccionado) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(ExamsApplication.class.getResource(" visualizarExamenStudent-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        scene.getStylesheets().add(Objects.requireNonNull(ExamsApplication.class.getResource("styles.css")).toExternalForm());
+        VisualizarExamenStudentViewController controller = fxmlLoader.getController();
+        controller.setMain(this, estudianteLogeado, examenSeleccionado);
+        stage.setTitle("Ampliación del nuevo examen");
+        stage.setScene(scene);
+        stage.show();
+      }
+
+    public void mostrarIngresarNuevoExamen(Estudiante estudianteLogeado) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(ExamsApplication.class.getResource("ingresarClave-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        scene.getStylesheets().add(Objects.requireNonNull(ExamsApplication.class.getResource("styles.css")).toExternalForm());
+        IngresarClaveViewController controller = fxmlLoader.getController();
+        controller.setMain(this, estudianteLogeado);
+        stage.setTitle("Ampliación del nuevo examen");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void abrirPresentarExamen(Estudiante estudianteLogeado, Examen examenPresentar) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(ExamsApplication.class.getResource("presentarExamen-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        scene.getStylesheets().add(Objects.requireNonNull(ExamsApplication.class.getResource("styles.css")).toExternalForm());
+        PresentarExamenViewController controller = fxmlLoader.getController();
+        controller.setMain(this, estudianteLogeado, examenPresentar);
         stage.setTitle("Ampliación del nuevo examen");
         stage.setScene(scene);
         stage.show();

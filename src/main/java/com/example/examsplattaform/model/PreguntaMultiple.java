@@ -76,4 +76,8 @@ public class PreguntaMultiple extends Pregunta implements Serializable {
     public int hashCode() {
         return Objects.hash(getTitulo(), getEnunciado(), getRespuestas(), getId());
     }
+    public boolean esRespuestaCorrecta(String opcionSeleccionada) {
+        return correcta.getLetra().equals(opcionSeleccionada);
+    }
+
 }
