@@ -14,6 +14,7 @@ public class AddQuestionsViewController {
     public Button btnTrueFalse;
     public Button btnOpenQuestion;
     public ScrollPane myScrollPane;
+    public Button btnFinalizar;
     ExamsApplication main;
     Profesor profesorLogeado;
     Examen examen;
@@ -75,6 +76,7 @@ public class AddQuestionsViewController {
             mainVBox.getChildren().add(preguntaVBox);
         }
         myScrollPane.setContent(mainVBox);
+        examen.setContainer(mainVBox);
     }
 
     @FXML
@@ -92,5 +94,18 @@ public class AddQuestionsViewController {
     @FXML
     public void onOpenQuestionClick(ActionEvent event) throws IOException{
         main.abrirAgregarPreguntaAbierta(profesorLogeado,examen);
+    }
+
+    public void onFinalizarBurronClick(ActionEvent event) throws IOException {
+        if (examen.getPreguntas().size()>0){
+            if(Alerta.saltarAlertaConfirmacion("ESTA APUNTO DE CREAR EL EXAMEN","Está seguro de que quiere finalizar el examen") == ButtonType.OK){
+                examen.setFinished(true);
+
+                main.abrirPanelProfesor(profesorLogeado);
+            }
+        }
+        else {
+            Alerta.saltarAlertaError("Esta intentando crear un examen vacío");
+        }
     }
 }

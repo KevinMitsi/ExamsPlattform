@@ -9,6 +9,7 @@ import java.util.Map;
 import java.util.Objects;
 
 public class Examen implements Serializable {
+    private boolean isFinished;
     private int id;
     private String titulo;
     private String subtitulo;
@@ -28,6 +29,7 @@ public class Examen implements Serializable {
         this.materia=materia;
         preguntas = new HashMap<>();
         this.id=hashCode();
+        this.isFinished = false;
     }
 
     public Examen() {
@@ -112,6 +114,14 @@ public class Examen implements Serializable {
 
     public void setContainer(VBox container) {
         this.container = container;
+    }
+
+    public boolean isFinished() {
+        return isFinished;
+    }
+
+    public void setFinished(boolean finished) {
+        isFinished = finished;
     }
 
     @Override

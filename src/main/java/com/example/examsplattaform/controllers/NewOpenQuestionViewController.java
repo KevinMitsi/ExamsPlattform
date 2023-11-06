@@ -28,6 +28,7 @@ public class NewOpenQuestionViewController {
     public void onAddClick(ActionEvent event) {
         if (!tfWords.getText().isBlank()){
             createdPregunta.getRespuestaCorrecta().add(tfWords.getText());
+            tfWords.setText("");
         }
         else {
             Alerta.saltarAlertaError("Agregue algo al campo de texto");
