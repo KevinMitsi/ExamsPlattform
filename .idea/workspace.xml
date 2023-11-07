@@ -5,25 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2bda76d7-8eec-4490-9aac-a390df4722e5" name="Changes" comment="++">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/IngresarClaveViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/PresentarExamenViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/VisualizarExamenStudentViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/exceptions/ExamenNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/examsplattaform/ingresarClave-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/examsplattaform/presentarExamen-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/examsplattaform/visualizarExamenStudent-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/ExamsPlattaform_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/ExamsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/ExamsApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/archivo/Log.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/archivo/Log.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/archivo/model.dat" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/archivo/model.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/archivo/model.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/archivo/model.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/AddQuestionsViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/AddQuestionsViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/IngresarClaveViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/IngresarClaveViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/PresentarExamenViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/PresentarExamenViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/StudentPanelViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/StudentPanelViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/VisualizarExamenProfesorViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/VisualizarExamenProfesorViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Estudiante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Estudiante.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Examen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Examen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/PreguntaAbierta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/PreguntaAbierta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/PreguntaMultiple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/PreguntaMultiple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/PreguntaTF.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/PreguntaTF.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Plataforma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examsplattaform/model/Plataforma.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/examsplattaform/examZoom-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/examsplattaform/login-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/examsplattaform/login-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,15 +51,19 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;KevinsBranch&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Kevin/Program Files/SceneBuilder/SceneBuilder.exe&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "KevinsBranch",
+    "last_opened_file_path": "C:/Users/Kevin/Program Files/SceneBuilder/SceneBuilder.exe",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Kevin\Desktop\Universidad\Estructuras\ExamsPlattaform\src\main\resources\com\example\examsplattaform" />
@@ -139,7 +141,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699243971829</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="++">
+      <option name="closed" value="true" />
+      <created>1699305583398</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1699305583398</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -161,5 +171,20 @@
     <MESSAGE value="Ahora los prfesores pueden crear N cantidad de preguntas ya sean PreguntaAbierta PreguntaMultiple.java o PreguntaTF" />
     <MESSAGE value="++" />
     <option name="LAST_COMMIT_MESSAGE" value="++" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/examsplattaform/controllers/PresentarExamenViewController.java</url>
+          <line>73</line>
+          <properties class="com.example.examsplattaform.controllers.PresentarExamenViewController" method="onFinalizarBUttonClick">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -3,10 +3,9 @@ package com.example.examsplattaform.controllers;
 import com.example.examsplattaform.ExamsApplication;
 import com.example.examsplattaform.model.Estudiante;
 import com.example.examsplattaform.model.Examen;
-import javafx.beans.property.SimpleDoubleProperty;
-import javafx.beans.property.SimpleFloatProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.ObservableMap;
 import javafx.event.ActionEvent;
@@ -17,14 +16,14 @@ import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
 
 import java.io.IOException;
+import java.util.HashMap;
 
 
 public class StudentPanelViewController {
     ObservableMap<String, Examen>examenObservableMap;
     ObservableList<Examen>examenObservableList;
     ExamsApplication main;
-    ModelFactoryController singleton = ModelFactoryController.getInstance();
-    Estudiante estudianteLogeado;
+   Estudiante estudianteLogeado;
     Examen examenSeleccionado = null;
     public TableView<Examen> tableExams;
     public Button btnNewExam;
@@ -45,9 +44,7 @@ public class StudentPanelViewController {
     }
     @FXML
     public void onDragSelecttedItem(MouseEvent mouseEvent) throws IOException {
-        if (examenSeleccionado!=null){
             main.abrirVisualizarExamenEstudiante(estudianteLogeado, examenSeleccionado);
-        }
     }
 
     @FXML
@@ -61,6 +58,11 @@ public class StudentPanelViewController {
     }
 
     private void fillObservableList() {
+        if (estudianteLogeado.getExamenesRealizados()==null){
+            estudianteLogeado.setExamenesRealizados(new HashMap<>());
+        }
+        examenObservableMap = FXCollections.observableMap(estudianteLogeado.getExamenesRealizados());
+        examenObservableList = FXCollections.observableArrayList();
         examenObservableMap.putAll(estudianteLogeado.getExamenesRealizados());
         examenObservableList.addAll(examenObservableMap.values());
         tableExams.getItems().clear();

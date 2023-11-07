@@ -8,8 +8,7 @@ import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.io.IOException;
 
 public class PresentarExamenViewController {
     public ScrollPane myScrolPane;
@@ -22,10 +21,10 @@ public class PresentarExamenViewController {
     private int preguntaId = 1;
     private int opcionId = 1;
 
+
     private void setMyScrolPane() {
         VBox mainVBox = new VBox();
         mainVBox.setSpacing(10); // Espaciado entre las preguntas
-
         for (Pregunta pregunta : examenPresentando.getPreguntas().values()) {
             VBox preguntaVBox = new VBox();
             preguntaVBox.setSpacing(5); // Espaciado entre los elementos de la pregunta
@@ -34,7 +33,6 @@ public class PresentarExamenViewController {
                 Label titleLabel = new Label("Título: " + pregunta.getTitulo());
                 Text enunciadoText = new Text("Enunciado: " + pregunta.getEnunciado());
                 ToggleGroup toggleGroup = new ToggleGroup();
-
                 preguntaVBox.getChildren().addAll(titleLabel, enunciadoText);
                 for (Repuesta respuesta : ((PreguntaMultiple) pregunta).getRespuestas().values()) {
                     RadioButton radioButton = new RadioButton(respuesta.getLetra() + ". " + respuesta.getDescripcion());
@@ -66,55 +64,77 @@ public class PresentarExamenViewController {
                 preguntaVBox.getChildren().addAll(titleLabel, enunciadoText, trueRadioButton, falseRadioButton);
             }
 
-            preguntaVBox.setId("pregunta" + preguntaId);
+            preguntaVBox.setId(String.valueOf(preguntaId));
             preguntaId++;
-
             mainVBox.getChildren().add(preguntaVBox);
         }
         myScrolPane.setContent(mainVBox);
     }
 
-    public void onFinalizarBUttonClick(ActionEvent event) {
-        Map<String, String> respuestasUsuario = new HashMap<>();
-         for (Node node : myScrolPane.getContent().lookupAll(".VBox")) {
-            if (node instanceof VBox) {
-                VBox preguntaVBox = (VBox) node;
-                String preguntaId = preguntaVBox.getId();
-
-                // Verifica si la pregunta es de tipo PreguntaAbierta
-                if (preguntas.containsKey(preguntaId) && preguntas.get(preguntaId) instanceof PreguntaAbierta) {
-                    TextArea textArea = preguntaVBox.lookup(".TextArea");
-                    String respuestaUsuario = textArea.getText();
-                    respuestasUsuario.put(preguntaId, respuestaUsuario);
-                }
-                // Verifica si la pregunta es de tipo PreguntaMultiple
-                else if (preguntas.containsKey(preguntaId) && preguntas.get(preguntaId) instanceof PreguntaMultiple) {
-                    ToggleGroup toggleGroup = preguntaVBox.lookup(".ToggleGroup");
-                    RadioButton selectedRadioButton = (RadioButton) toggleGroup.getSelectedToggle();
-                    if (selectedRadioButton != null) {
-                        String opcionSeleccionada = selectedRadioButton.getId();
-                        respuestasUsuario.put(preguntaId, opcionSeleccionada);
-                    }
-                }
-                // Verifica si la pregunta es de tipo PreguntaTF
-                else if (preguntas.containsKey(preguntaId) && preguntas.get(preguntaId) instanceof PreguntaTF) {
-                    ToggleGroup toggleGroup = preguntaVBox.lookup(".ToggleGroup");
-                    RadioButton selectedRadioButton = (RadioButton) toggleGroup.getSelectedToggle();
-                    if (selectedRadioButton != null) {
-                        boolean respuestaUsuario = Boolean.parseBoolean(selectedRadioButton.getText());
-                        respuestasUsuario.put(preguntaId, String.valueOf(respuestaUsuario));
-                    }
-                }
-            }
+    public void onFinalizarBUttonClick(ActionEvent event) throws IOException {
+        int nCorrectas=0;
+        int numeroPregunta=1;
+        for (Pregunta pregunta: examenPresentando.getPreguntas().values()) {
+          if (pregunta instanceof PreguntaMultiple){
+              String correcta = ((PreguntaMultiple) pregunta).getCorrecta().getLetra();
+              VBox pregntaVbox = (VBox) myScrolPane.getContent().lookup("#"+(numeroPregunta));
+              for (Node radio: pregntaVbox.getChildren()) {
+                  if (radio instanceof  RadioButton){
+                      if (((RadioButton) radio).isSelected()){
+                          if (((RadioButton) radio).getText().startsWith(correcta)){
+                              nCorrectas=nCorrectas+1;
+                              numeroPregunta=numeroPregunta+1;
+                          }
+                      }
+                  }
+              }
+          } else if (pregunta instanceof  PreguntaAbierta) {
+              VBox vBoxPregunta = (VBox) myScrolPane.getContent().lookup("#"+numeroPregunta);
+              for (Node node: vBoxPregunta.getChildren()) {
+                  if (node instanceof TextArea){
+                      if (((PreguntaAbierta) pregunta).getRespuestaCorrecta().contains(((TextArea) node).getText())){
+                          nCorrectas = nCorrectas+1;
+                          numeroPregunta=numeroPregunta+1;
+                      }
+                  }
+              }
+          } else if (pregunta instanceof  PreguntaTF) {
+              boolean res = ((PreguntaTF) pregunta).isValue();
+              boolean bandera;
+              VBox vBoxPregunta = (VBox) myScrolPane.getContent().lookup("#"+numeroPregunta);
+              for(Node node: vBoxPregunta.getChildren()){
+                  if (node instanceof RadioButton){
+                      if (((RadioButton) node).getText().equals("TRUE")){
+                          bandera = true;
+                          if (bandera==res){
+                              nCorrectas=nCorrectas+1;
+                              numeroPregunta = numeroPregunta+1;
+                          }
+                      }
+                      if (((RadioButton) node).getText().equals("FALSE")){
+                          bandera=false;
+                          if (bandera==res){
+                              nCorrectas=nCorrectas+1;
+                              numeroPregunta = numeroPregunta+1;
+                          }
+                      }
+                  }
+              }
+          }
         }
-
-        // Llama al método de la clase Examen para evaluar las respuestas del usuario
-        float notaEstudiante = examenPresentando.evaluarRespuestas(respuestasUsuario);
-
-        // Haz lo que desees con la nota del estudiante (por ejemplo, mostrarla en un mensaje)
-        System.out.println("Nota del estudiante: " + notaEstudiante);
+        calcularNota(nCorrectas);
     }
 
+    private void calcularNota(int correctas) throws IOException {
+        float calificacion = correctas*(examenPresentando.getTotalPuntos()/examenPresentando.getPreguntas().size());
+        Alerta.saltarAlertaInformacion("Usted ha sacado "+ calificacion);
+        Examen studentExam = examenPresentando;
+        studentExam.setNotaEstudiante(calificacion);
+        estudianteLogeado.getExamenesRealizados().put(String.valueOf(estudianteLogeado.getExamenesRealizados().size()),studentExam);
+        singleton.guardarResourceXML();
+        singleton.guardarResourceXML();
+        main.abrirPanelEstudiante(estudianteLogeado);
+    }
 
 
     public void setMain(ExamsApplication examsApplication, Estudiante estudianteLogeado, Examen examenPresentar) {
@@ -123,4 +143,5 @@ public class PresentarExamenViewController {
         this.examenPresentando = examenPresentar;
         setMyScrolPane();
     }
+
 }

@@ -21,8 +21,6 @@ public class Examen implements Serializable {
     private float puntoXPregunta;
     private float notaEstudiante;
 
-    VBox container;
-
     public Examen(String titulo, String subtitulo, String materia,float totalPuntos) {
         this.titulo = titulo;
         this.subtitulo = subtitulo;
@@ -116,14 +114,6 @@ public class Examen implements Serializable {
 
     public void setNumeroPresentados(int numeroPresentados) {
         this.numeroPresentados = numeroPresentados;
-    }
-
-    public VBox getContainer() {
-        return container;
-    }
-
-    public void setContainer(VBox container) {
-        this.container = container;
     }
 
     public boolean isFinished() {

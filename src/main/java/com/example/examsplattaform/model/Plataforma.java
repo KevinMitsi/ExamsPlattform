@@ -1,9 +1,6 @@
 package com.example.examsplattaform.model;
 
-import com.example.examsplattaform.exceptions.AccountException;
-import com.example.examsplattaform.exceptions.AlreadyRegisteredUserException;
-import com.example.examsplattaform.exceptions.ExamCreationException;
-import com.example.examsplattaform.exceptions.UserNotFoundException;
+import com.example.examsplattaform.exceptions.*;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -184,5 +181,13 @@ public class Plataforma implements Serializable {
            profesorLogeado.getExamenesCreados().add(examen);
            examenList.put(String.valueOf(examen.getClave()),examen);
        }
+    }
+    public Examen presentarExamen(String text) throws ExamenNotFoundException {
+        if(getExamenList().containsKey(text)){
+            return getExamenList().get(text);
+        }
+        else {
+            throw new ExamenNotFoundException("Este examen no existe");
+        }
     }
 }
