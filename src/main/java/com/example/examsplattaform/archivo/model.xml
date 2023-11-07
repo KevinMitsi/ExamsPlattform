@@ -13,7 +13,7 @@
         <string>Garcia</string>
        </void>
        <void property="cedula">
-        <string>1004917999</string>
+        <string>1004</string>
        </void>
        <void property="colegio">
         <string>UQ</string>
@@ -26,16 +26,19 @@
          <void method="add">
           <object class="com.example.examsplattaform.model.Examen" id="Examen0">
            <void property="clave">
-            <string>-805047329</string>
+            <string>-1798116317</string>
            </void>
            <void property="finished">
             <boolean>true</boolean>
            </void>
            <void property="id">
-            <int>-805047784</int>
+            <int>-1798116376</int>
            </void>
            <void property="materia">
-            <string>asjdiana</string>
+            <string>sjandjika</string>
+           </void>
+           <void property="notaEstudiante">
+            <float>5.0</float>
            </void>
            <void property="preguntas">
             <void method="put">
@@ -44,7 +47,7 @@
               <void property="correcta">
                <object class="com.example.examsplattaform.model.Repuesta">
                 <void property="descripcion">
-                 <string>Esta</string>
+                 <string>Es esta</string>
                 </void>
                 <void property="letra">
                  <string>A</string>
@@ -52,10 +55,10 @@
                </object>
               </void>
               <void property="enunciado">
-               <string>Si</string>
+               <string>sjandak</string>
               </void>
               <void property="id">
-               <int>-524964631</int>
+               <int>-724761394</int>
               </void>
               <void property="respuestas">
                <object class="java.util.HashMap">
@@ -63,7 +66,7 @@
                  <string>0</string>
                  <object class="com.example.examsplattaform.model.Repuesta">
                   <void property="descripcion">
-                   <string>Esta</string>
+                   <string>Es esta</string>
                   </void>
                   <void property="letra">
                    <string>A</string>
@@ -74,7 +77,7 @@
                  <string>1</string>
                  <object class="com.example.examsplattaform.model.Repuesta">
                   <void property="descripcion">
-                   <string>no</string>
+                   <string>non</string>
                   </void>
                   <void property="letra">
                    <string>B</string>
@@ -85,7 +88,7 @@
                  <string>2</string>
                  <object class="com.example.examsplattaform.model.Repuesta">
                   <void property="descripcion">
-                   <string>ma</string>
+                   <string>no</string>
                   </void>
                   <void property="letra">
                    <string>C</string>
@@ -96,7 +99,7 @@
                  <string>3</string>
                  <object class="com.example.examsplattaform.model.Repuesta">
                   <void property="descripcion">
-                   <string>si</string>
+                   <string>asd</string>
                   </void>
                   <void property="letra">
                    <string>D</string>
@@ -106,7 +109,7 @@
                </object>
               </void>
               <void property="titulo">
-               <string>Mi pregunta</string>
+               <string>jasdnja</string>
               </void>
              </object>
             </void>
@@ -114,13 +117,13 @@
              <string>1</string>
              <object class="com.example.examsplattaform.model.PreguntaTF">
               <void property="enunciado">
-               <string>Arrroz</string>
+               <string>es true</string>
               </void>
               <void property="id">
-               <int>1731211214</int>
+               <int>-1061116160</int>
               </void>
               <void property="titulo">
-               <string>Mi pregunta TF</string>
+               <string>Mi tf</string>
               </void>
               <void property="value">
                <boolean>true</boolean>
@@ -131,89 +134,32 @@
              <string>2</string>
              <object class="com.example.examsplattaform.model.PreguntaAbierta">
               <void property="enunciado">
-               <string>siiiiis</string>
+               <string>sakjndkaj</string>
               </void>
               <void property="id">
-               <int>-1652426337</int>
+               <int>-1881668616</int>
               </void>
               <void property="respuestaCorrecta">
                <object class="java.util.ArrayList">
                 <void method="add">
-                 <string>si</string>
+                 <string>clave</string>
                 </void>
                 <void method="add">
-                 <string>no</string>
-                </void>
-                <void method="add">
-                 <string>He</string>
+                 <string>plabra</string>
                 </void>
                </object>
               </void>
               <void property="titulo">
-               <string>Mi pregunta abierta</string>
+               <string>jdasdasj</string>
               </void>
              </object>
             </void>
            </void>
            <void property="subtitulo">
-            <string>ahsdbah</string>
+            <string>nsadjhasjh</string>
            </void>
            <void property="titulo">
-            <string>asdbah</string>
-           </void>
-           <void property="totalPuntos">
-            <float>5.0</float>
-           </void>
-          </object>
-         </void>
-         <void method="add">
-          <object class="com.example.examsplattaform.model.Examen" id="Examen1">
-           <void property="clave">
-            <string>1435034562</string>
-           </void>
-           <void property="id">
-            <int>1435034166</int>
-           </void>
-           <void property="materia">
-            <string>ajsdnajsd</string>
-           </void>
-           <void property="preguntas">
-            <void method="put">
-             <string>0</string>
-             <object class="com.example.examsplattaform.model.PreguntaAbierta">
-              <void property="enunciado">
-               <string>Pija</string>
-              </void>
-              <void property="id">
-               <int>699416294</int>
-              </void>
-              <void property="respuestaCorrecta">
-               <object class="java.util.ArrayList">
-                <void method="add">
-                 <string>Pija</string>
-                </void>
-                <void method="add">
-                 <string>Yo</string>
-                </void>
-                <void method="add">
-                 <string>Arroz</string>
-                </void>
-                <void method="add">
-                 <string>Pollo</string>
-                </void>
-               </object>
-              </void>
-              <void property="titulo">
-               <string>Siii</string>
-              </void>
-             </object>
-            </void>
-           </void>
-           <void property="subtitulo">
-            <string>ajsdaj</string>
-           </void>
-           <void property="titulo">
-            <string>UHAHSDBAHSABahabs</string>
+            <string>kjsndjah</string>
            </void>
            <void property="totalPuntos">
             <float>5.0</float>
@@ -223,7 +169,7 @@
         </object>
        </void>
        <void property="nombre">
-        <string>Kevin</string>
+        <string>kevin</string>
        </void>
       </object>
      </void>
@@ -240,24 +186,29 @@
      <void property="personaAsociada">
       <object class="com.example.examsplattaform.model.Estudiante" id="Estudiante0">
        <void property="apellido">
-        <string>Arias</string>
+        <string>Garcia Duque</string>
        </void>
        <void property="cedula">
-        <string>111</string>
+        <string>543</string>
        </void>
        <void property="cuenta">
         <object idref="Cuenta1"/>
        </void>
        <void property="examenesRealizados">
-        <object class="java.util.HashMap"/>
+        <object class="java.util.HashMap">
+         <void method="put">
+          <string>0</string>
+          <object idref="Examen0"/>
+         </void>
+        </object>
        </void>
        <void property="nombre">
-        <string>Robinson</string>
+        <string>Rocky</string>
        </void>
       </object>
      </void>
      <void property="usuario">
-      <string>robin</string>
+      <string>rocky</string>
      </void>
     </object>
    </void>
@@ -269,12 +220,8 @@
   </void>
   <void property="examenList">
    <void method="put">
-    <string>-805047329</string>
+    <string>-1798116317</string>
     <object idref="Examen0"/>
-   </void>
-   <void method="put">
-    <string>1435034562</string>
-    <object idref="Examen1"/>
    </void>
   </void>
   <void property="profesresRegistrados">

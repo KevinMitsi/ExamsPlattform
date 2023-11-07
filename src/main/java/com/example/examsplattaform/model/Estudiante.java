@@ -14,8 +14,7 @@ public class Estudiante extends Persona implements Serializable {
     private String cedula;
     private Map<String, Examen>examenesRealizados;
     private Cuenta cuenta;
-    ModelFactoryController singleton = ModelFactoryController.getInstance();
-    public Estudiante(String nombre, String apellido, String cedula, Cuenta cuenta) {
+   public Estudiante(String nombre, String apellido, String cedula, Cuenta cuenta) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.cedula = cedula;
@@ -87,12 +86,5 @@ public class Estudiante extends Persona implements Serializable {
                 '}';
     }
 
-    public Examen presentarExamen(String text) throws ExamenNotFoundException {
-        if(singleton.getPlataforma().getExamenList().containsKey(text)){
-            return singleton.getPlataforma().getExamenList().get(text);
-        }
-        else {
-            throw new ExamenNotFoundException("Este examen no existe");
-        }
-    }
+
 }

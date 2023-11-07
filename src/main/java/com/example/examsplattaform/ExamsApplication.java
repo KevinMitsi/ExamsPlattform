@@ -204,7 +204,7 @@ public class ExamsApplication extends Application {
     }
 
     public void abrirVisualizarExamenEstudiante(Estudiante estudianteLogeado, Examen examenSeleccionado) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(ExamsApplication.class.getResource(" visualizarExamenStudent-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(ExamsApplication.class.getResource("visualizarExamenStudent-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         scene.getStylesheets().add(Objects.requireNonNull(ExamsApplication.class.getResource("styles.css")).toExternalForm());
         VisualizarExamenStudentViewController controller = fxmlLoader.getController();

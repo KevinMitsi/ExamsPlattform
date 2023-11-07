@@ -8,7 +8,6 @@
     <children>
         <VBox alignment="CENTER" spacing="10" />
         <HBox layoutX="11.0" layoutY="360.0" prefHeight="25.0" prefWidth="295.0">
-            <Hyperlink onAction="#recuperarContrasena" prefHeight="24.0" prefWidth="175.0" styleClass="forgot-password-link" text="¿Olvidaste tu contraseña?" />
             <Button alignment="CENTER" onAction="#registerButtonClick" prefHeight="39.0" prefWidth="117.0" styleClass="register-button" text="Registrarse" />
         </HBox>
         <Button layoutX="122.0" layoutY="303.0" onAction="#loginButtonAction" styleClass="login-button" text="Iniciar Sesión" />

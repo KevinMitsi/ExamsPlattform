@@ -76,8 +76,7 @@ public class AddQuestionsViewController {
             mainVBox.getChildren().add(preguntaVBox);
         }
         myScrollPane.setContent(mainVBox);
-        examen.setContainer(mainVBox);
-    }
+        }
 
     @FXML
     public void onBtnMultipleClick(ActionEvent event) throws IOException {
@@ -100,7 +99,8 @@ public class AddQuestionsViewController {
         if (examen.getPreguntas().size()>0){
             if(Alerta.saltarAlertaConfirmacion("ESTA APUNTO DE CREAR EL EXAMEN","Está seguro de que quiere finalizar el examen") == ButtonType.OK){
                 examen.setFinished(true);
-
+                singleton.guardarResourceXML();
+                singleton.guardarResourceBinario();
                 main.abrirPanelProfesor(profesorLogeado);
             }
         }

@@ -13,6 +13,7 @@ import java.io.IOException;
 public class IngresarClaveViewController {
     ExamsApplication main;
     Estudiante estudianteLogeado;
+    ModelFactoryController singleton = ModelFactoryController.getInstance();
     public Button btnGo;
     public TextField tfCode;
     public Button btnBack;
@@ -20,10 +21,12 @@ public class IngresarClaveViewController {
     public void onGoButtonClick(ActionEvent event) {
         if(!tfCode.getText().isBlank()){
             try{
-                Examen examenPresentar=estudianteLogeado.presentarExamen(tfCode.getText());
+                Examen examenPresentar=singleton.getPlataforma().presentarExamen(tfCode.getText());
                 main.abrirPresentarExamen(estudianteLogeado,examenPresentar);
             } catch (ExamenNotFoundException e) {
                 Alerta.saltarAlertaError(e.getMessage());
+            } catch (IOException e) {
+                throw new RuntimeException(e);
             }
         }
         else{
